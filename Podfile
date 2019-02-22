@@ -9,6 +9,7 @@ target 'JoyfulChurch' do
   pod 'Realm'
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'Firebase'
 
   # Pods for JoyfulChurch
 
