@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
         // Do any additional setup after loading the view, typically from a nib.
         label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
         self.view.addSubview(label)

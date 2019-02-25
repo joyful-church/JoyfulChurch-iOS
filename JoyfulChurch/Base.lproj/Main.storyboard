@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dY5-YF-85I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7HH-u5-nZw">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,19 +12,19 @@
         <!--Item-->
         <scene sceneID="vmk-mX-NgI">
             <objects>
-                <viewController id="XBb-Kh-Zqs" sceneMemberID="viewController">
+                <viewController id="XBb-Kh-Zqs" customClass="ViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J5U-sF-oYX"/>
                         <viewControllerLayoutGuide type="bottom" id="bsd-Za-K6Z"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CLw-SD-Dhg">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CLw-SD-Dhg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kO-LJ-owJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kO-LJ-owJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-ND-f22">
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-ND-f22">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="920"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-Rd-sCM">
@@ -57,7 +57,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="mrA-ND-f22" secondAttribute="bottom" id="0cA-p0-AUB"/>
                                     <constraint firstItem="mrA-ND-f22" firstAttribute="leading" secondItem="9kO-LJ-owJ" secondAttribute="leading" id="1uR-Gz-x9E"/>
-                                    <constraint firstItem="mrA-ND-f22" firstAttribute="top" secondItem="9kO-LJ-owJ" secondAttribute="top" id="8zq-vt-5dF"/>
+                                    <constraint firstAttribute="top" secondItem="mrA-ND-f22" secondAttribute="top" id="8zq-vt-5dF"/>
                                     <constraint firstAttribute="trailing" secondItem="mrA-ND-f22" secondAttribute="trailing" id="nac-nO-Bdj"/>
                                 </constraints>
                             </scrollView>
@@ -118,7 +118,7 @@
         <!--View Controller-->
         <scene sceneID="kFQ-k5-ebG">
             <objects>
-                <viewController id="dY5-YF-85I" sceneMemberID="viewController">
+                <viewController id="dY5-YF-85I" customClass="ViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="anq-cc-KXg"/>
                         <viewControllerLayoutGuide type="bottom" id="X6d-gf-IU3"/>
@@ -130,11 +130,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_214F65E7093D-1" translatesAutoresizingMaskIntoConstraints="NO" id="PxM-kB-Fj6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBi-Uu-zA8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -144,17 +139,19 @@
                             <constraint firstAttribute="trailing" secondItem="PxM-kB-Fj6" secondAttribute="trailing" id="vgk-aQ-NPA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7BV-kA-ULM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Di0-cQ-ZZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969.56521739130437" y="-551.11607142857144"/>
+            <point key="canvasLocation" x="1879.7101449275365" y="-551.11607142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dlx-u5-nVw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7HH-u5-nZw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7HH-u5-nZw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mc4-64-sai">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -186,6 +183,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veC-nf-KeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676" y="154.27286356821591"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q03-rw-PeT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UkB-NK-0pY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JqN-Xb-Pa4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dY5-YF-85I" kind="relationship" relationship="rootViewController" id="ab0-ld-mRq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6V-tR-3t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969.56521739130437" y="-551.11607142857144"/>
         </scene>
     </scenes>
     <resources>
