@@ -4,12 +4,21 @@
 target 'JoyfulChurch' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  #ReactiveX
   pod 'RxSwift'
   pod 'RxCocoa'
+
+  #DataBase
   pod 'Realm'
+
   pod 'Alamofire'
   pod 'Kingfisher'
+
+  #Firebase
   pod 'Firebase'
+
+  #PagerView
+  pod 'FSPagerView'
 
   # Pods for JoyfulChurch
 
