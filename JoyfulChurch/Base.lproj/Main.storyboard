@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-ND-f22" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="920"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1220"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-Rd-sCM">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -57,10 +57,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv4-nz-gUQ">
-                                                <rect key="frame" x="0.0" y="420" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="420" width="414" height="800"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="500" id="914-cp-2OO"/>
+                                                    <constraint firstAttribute="height" constant="800" id="914-cp-2OO"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

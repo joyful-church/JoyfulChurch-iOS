@@ -48,6 +48,8 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.title = "JOYFUL"
         self.title = "JOYFUL"
+        pagerView.isInfinite = true
+        pagerView.automaticSlidingInterval = 3.0
     }
     
 
