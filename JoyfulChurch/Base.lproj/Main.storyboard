@@ -58,9 +58,19 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv4-nz-gUQ">
                                                 <rect key="frame" x="0.0" y="420" width="414" height="800"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-An-IPk">
+                                                        <rect key="frame" x="30" y="53" width="240" height="128"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="BUn-An-IPk" firstAttribute="top" secondItem="tv4-nz-gUQ" secondAttribute="top" id="80m-h1-K5r"/>
                                                     <constraint firstAttribute="height" constant="800" id="914-cp-2OO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BUn-An-IPk" secondAttribute="bottom" id="Ig3-f0-zXp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BUn-An-IPk" secondAttribute="trailing" id="OEd-WP-JLZ"/>
+                                                    <constraint firstItem="BUn-An-IPk" firstAttribute="leading" secondItem="tv4-nz-gUQ" secondAttribute="leading" id="WXd-p1-nCc"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

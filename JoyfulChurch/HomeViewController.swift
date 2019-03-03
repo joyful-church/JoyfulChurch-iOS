@@ -46,6 +46,9 @@ class HomeViewController: UIViewController {
         pagerView.dataSource = self
         scrollView.delegate = self
         self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
+        self.navigationController?.navigationBar.tintColor = .white
+//        self.navigationController?.navigationBar.barTintColor = .white
         self.title = "JOYFUL"
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 3.0
