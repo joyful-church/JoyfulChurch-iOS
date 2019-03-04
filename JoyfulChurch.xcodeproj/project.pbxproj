@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23229D37222D58CC00B472CD /* MoreViewController.swift */; };
 		234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224DA2217D70A0062B8CB /* AppDelegate.swift */; };
 		234224DD2217D70A0062B8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224DC2217D70A0062B8CB /* ViewController.swift */; };
 		234224E02217D70A0062B8CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234224DE2217D70A0062B8CB /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23229D37222D58CC00B472CD /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		234224D72217D70A0062B8CB /* JoyfulChurch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoyfulChurch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		234224DA2217D70A0062B8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		234224DC2217D70A0062B8CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				234224DA2217D70A0062B8CB /* AppDelegate.swift */,
 				234224DC2217D70A0062B8CB /* ViewController.swift */,
 				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
+				23229D37222D58CC00B472CD /* MoreViewController.swift */,
 				234224DE2217D70A0062B8CB /* Main.storyboard */,
 				234224E12217D70D0062B8CB /* Assets.xcassets */,
 				234224E32217D70D0062B8CB /* LaunchScreen.storyboard */,
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				234224DD2217D70A0062B8CB /* ViewController.swift in Sources */,
+				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
 				234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */,
 				23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */,
 			);

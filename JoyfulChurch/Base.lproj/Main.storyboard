@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="vmk-mX-NgI">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="XBb-Kh-Zqs" customClass="HomeViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,9 +59,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv4-nz-gUQ">
                                                 <rect key="frame" x="0.0" y="420" width="414" height="800"/>
                                                 <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-An-IPk">
-                                                        <rect key="frame" x="30" y="53" width="240" height="128"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-An-IPk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="cvL-uU-mxv">
+                                                                <rect key="frame" x="0.0" y="28" width="414" height="96"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvL-uU-mxv" id="MIa-Gr-aoJ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +79,7 @@
                                                     <constraint firstItem="BUn-An-IPk" firstAttribute="top" secondItem="tv4-nz-gUQ" secondAttribute="top" id="80m-h1-K5r"/>
                                                     <constraint firstAttribute="height" constant="800" id="914-cp-2OO"/>
                                                     <constraint firstAttribute="bottom" secondItem="BUn-An-IPk" secondAttribute="bottom" id="Ig3-f0-zXp"/>
-                                                    <constraint firstAttribute="trailing" secondItem="BUn-An-IPk" secondAttribute="trailing" id="OEd-WP-JLZ"/>
+                                                    <constraint firstAttribute="right" secondItem="BUn-An-IPk" secondAttribute="right" id="OEd-WP-JLZ"/>
                                                     <constraint firstItem="BUn-An-IPk" firstAttribute="leading" secondItem="tv4-nz-gUQ" secondAttribute="leading" id="WXd-p1-nCc"/>
                                                 </constraints>
                                             </view>
@@ -104,7 +114,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="ICO-KA-Wsp"/>
+                    <tabBarItem key="tabBarItem" title="" id="ICO-KA-Wsp"/>
                     <connections>
                         <outlet property="contentView" destination="mrA-ND-f22" id="SHn-tk-V7L"/>
                         <outlet property="pageControl" destination="el5-aK-ouU" id="E6G-IL-WLN"/>
@@ -187,7 +197,7 @@
         <!--Item-->
         <scene sceneID="Ya6-cp-PsS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2Z5-m9-hiQ" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2Z5-m9-hiQ" customClass="MoreViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mQc-8F-s0B"/>
                         <viewControllerLayoutGuide type="bottom" id="m2A-eH-4my"/>

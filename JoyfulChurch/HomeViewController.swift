@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     
     //MARK: - Property
-    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
+    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -31,10 +31,29 @@ class HomeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navagationBarStatus(offset: self.scrollView.contentOffset.y)
+        
     }
     
+    private func navagationBarStatus(offset: CGFloat) {
+        if(offset > 150){
+            self.navigationController?.navigationBar.isHidden = false
+            self.navigationController?.navigationBar.alpha = (offset - 150) / 50
+        }else{
+            self.navigationController?.navigationBar.isHidden = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
     //MARK:: - Method
     private func setController() {
         if #available(iOS 11.0, *) {
@@ -42,13 +61,27 @@ class HomeViewController: UIViewController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
+        
         pagerView.delegate = self
         pagerView.dataSource = self
         scrollView.delegate = self
+        //네이게이션 설정
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
         self.navigationController?.navigationBar.tintColor = .white
-//        self.navigationController?.navigationBar.barTintColor = .white
+        self.tabBarController?.tabBar.tintColor = .white
+        //탭바 설정
+        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "Home")
+        self.tabBarController?.tabBar.items?[0].title = "Home"
+        self.tabBarController?.tabBar.items?[0].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "Home")
+        self.tabBarController?.tabBar.items?[1].title = "Home"
+        self.tabBarController?.tabBar.items?[1].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+        self.tabBarController?.tabBar.items?[2].image = UIImage(named: "More")
+        self.tabBarController?.tabBar.items?[2].title = "More"
+        self.tabBarController?.tabBar.items?[2].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+//        self.tabBarItem.image = UIImage(named: "Home")
+        
         self.title = "JOYFUL"
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 3.0
