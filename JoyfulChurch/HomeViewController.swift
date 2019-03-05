@@ -33,6 +33,11 @@ class HomeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         navagationBarStatus(offset: self.scrollView.contentOffset.y)
         
     }
@@ -52,15 +57,12 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = true
         
     }
     //MARK:: - Method
     private func setController() {
-        if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+        
         
         pagerView.delegate = self
         pagerView.dataSource = self
@@ -116,6 +118,8 @@ extension HomeViewController: FSPagerViewDelegate {
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
+        print(self.navigationController?.navigationBar.isHidden)
+        print(self.navigationController?.navigationBar.alpha)
         let OffsetY = scrollView.contentOffset.y
         if(OffsetY > 150){
             self.navigationController?.navigationBar.isHidden = false
