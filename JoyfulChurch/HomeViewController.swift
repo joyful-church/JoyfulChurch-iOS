@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     }
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var menuTableView: UITableView!
     
     //MARK: - Property
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]

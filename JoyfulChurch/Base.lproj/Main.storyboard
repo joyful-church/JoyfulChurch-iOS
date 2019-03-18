@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7HH-u5-nZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7HH-u5-nZw">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -117,6 +117,7 @@
                     <tabBarItem key="tabBarItem" title="" id="ICO-KA-Wsp"/>
                     <connections>
                         <outlet property="contentView" destination="mrA-ND-f22" id="SHn-tk-V7L"/>
+                        <outlet property="menuTableView" destination="BUn-An-IPk" id="RTq-xE-sTX"/>
                         <outlet property="pageControl" destination="el5-aK-ouU" id="E6G-IL-WLN"/>
                         <outlet property="pagerView" destination="fZ2-lC-4Ht" id="zmt-wO-gng"/>
                         <outlet property="scrollView" destination="9kO-LJ-owJ" id="Ahr-rm-dWa"/>

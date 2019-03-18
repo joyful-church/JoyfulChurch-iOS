@@ -15,6 +15,8 @@
 		234224E52217D70D0062B8CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234224E32217D70D0062B8CB /* LaunchScreen.storyboard */; };
 		234224F02217D70D0062B8CB /* JoyfulChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224EF2217D70D0062B8CB /* JoyfulChurchTests.swift */; };
 		234224FB2217D70D0062B8CB /* JoyfulChurchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224FA2217D70D0062B8CB /* JoyfulChurchUITests.swift */; };
+		23509D9D2240067300872F81 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509D9B2240067300872F81 /* MenuCell.swift */; };
+		23509D9E2240067300872F81 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23509D9C2240067300872F81 /* MenuCell.xib */; };
 		23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAD91B2226C82D00C76E48 /* HomeViewController.swift */; };
 		2E187AA85C6A8CB3DFC39CB6 /* Pods_JoyfulChurchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42B3FAD5E2C0885C673F634 /* Pods_JoyfulChurchTests.framework */; };
 		E16BB0D6F220699553CDA71D /* Pods_JoyfulChurch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABE45BF3AC69DAB7AD8101D /* Pods_JoyfulChurch.framework */; };
@@ -53,6 +55,8 @@
 		234224F62217D70D0062B8CB /* JoyfulChurchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoyfulChurchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		234224FA2217D70D0062B8CB /* JoyfulChurchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoyfulChurchUITests.swift; sourceTree = "<group>"; };
 		234224FC2217D70D0062B8CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23509D9B2240067300872F81 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		23509D9C2240067300872F81 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		23EAD91B2226C82D00C76E48 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2E761857CC0FEFA25D21FDFC /* Pods-JoyfulChurch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurch.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch.release.xcconfig"; sourceTree = "<group>"; };
 		482B2CD9A5404C10E4A08024 /* Pods-JoyfulChurchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchTests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchTests/Pods-JoyfulChurchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				234224DC2217D70A0062B8CB /* ViewController.swift */,
 				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
 				23229D37222D58CC00B472CD /* MoreViewController.swift */,
+				23509D9B2240067300872F81 /* MenuCell.swift */,
+				23509D9C2240067300872F81 /* MenuCell.xib */,
 				234224DE2217D70A0062B8CB /* Main.storyboard */,
 				234224E12217D70D0062B8CB /* Assets.xcassets */,
 				234224E32217D70D0062B8CB /* LaunchScreen.storyboard */,
@@ -282,6 +288,7 @@
 			files = (
 				234224E52217D70D0062B8CB /* LaunchScreen.storyboard in Resources */,
 				234224E22217D70D0062B8CB /* Assets.xcassets in Resources */,
+				23509D9E2240067300872F81 /* MenuCell.xib in Resources */,
 				234224E02217D70A0062B8CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				234224DD2217D70A0062B8CB /* ViewController.swift in Sources */,
+				23509D9D2240067300872F81 /* MenuCell.swift in Sources */,
 				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
 				234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */,
 				23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */,
