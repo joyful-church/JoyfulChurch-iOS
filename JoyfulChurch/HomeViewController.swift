@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
     
     //MARK: - Property
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]
+    fileprivate let menuArray = ["EVENT", "DEEP", "CONNECT", "PRAYER", "SOCIAL"]
+    
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -130,5 +132,21 @@ extension HomeViewController: UIScrollViewDelegate {
             self.navigationController?.navigationBar.isHidden = true
         }
     }
+    
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
     
 }
