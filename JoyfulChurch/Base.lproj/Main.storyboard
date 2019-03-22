@@ -117,6 +117,8 @@
                     <tabBarItem key="tabBarItem" title="" id="ICO-KA-Wsp"/>
                     <connections>
                         <outlet property="contentView" destination="mrA-ND-f22" id="SHn-tk-V7L"/>
+                        <outlet property="menuBaseView" destination="tv4-nz-gUQ" id="CyN-RM-C5X"/>
+                        <outlet property="menuBaseViewHeight" destination="914-cp-2OO" id="lEP-JV-l7K"/>
                         <outlet property="menuTableView" destination="BUn-An-IPk" id="RTq-xE-sTX"/>
                         <outlet property="pageControl" destination="el5-aK-ouU" id="E6G-IL-WLN"/>
                         <outlet property="pagerView" destination="fZ2-lC-4Ht" id="zmt-wO-gng"/>

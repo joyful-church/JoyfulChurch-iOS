@@ -19,7 +19,11 @@ class HomeViewController: UIViewController {
     }
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var menuBaseView: UIView!
+    @IBOutlet weak var menuBaseViewHeight: NSLayoutConstraint!
     @IBOutlet weak var menuTableView: UITableView!
+    
+    
     
     //MARK: - Property
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]
@@ -136,7 +140,9 @@ extension HomeViewController: UIScrollViewDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 460/3
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
