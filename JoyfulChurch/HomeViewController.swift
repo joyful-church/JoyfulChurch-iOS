@@ -23,12 +23,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuBaseViewHeight: NSLayoutConstraint!
     @IBOutlet weak var menuTableView: UITableView!
     
-    
-    
     //MARK: - Property
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]
     fileprivate let menuArray = ["EVENT", "DEEP", "CONNECT", "PRAYER", "SOCIAL"]
-    
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -47,9 +44,6 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        
     }
     
     private func navagationBarStatus(offset: CGFloat) {
@@ -73,7 +67,9 @@ class HomeViewController: UIViewController {
     }
     //MARK:: - Method
     private func setController() {
-        
+        self.menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
+        self.menuTableView.delegate = self
+        self.menuTableView.dataSource = self
         
         pagerView.delegate = self
         pagerView.dataSource = self
@@ -151,7 +147,9 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        
+        return cell
     }
     
     
