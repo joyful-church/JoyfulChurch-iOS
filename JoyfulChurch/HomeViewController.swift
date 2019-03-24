@@ -1,6 +1,8 @@
 import UIKit
 import FSPagerView
 
+let MENUCELLHEIGHT: CGFloat = 460/3
+
 class HomeViewController: UIViewController {
 
     //MARK: - IBOutlet
@@ -25,7 +27,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Property
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]
-    fileprivate let menuArray = ["EVENT", "DEEP", "CONNECT", "PRAYER", "SOCIAL"]
+    fileprivate let menuArray = ["EVENT", "CONNECT", "PRAYER", "SOCIAL"]
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -137,17 +139,20 @@ extension HomeViewController: UIScrollViewDelegate {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 460/3
+        return MENUCELLHEIGHT
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        menuBaseViewHeight.constant = MENUCELLHEIGHT * CGFloat(menuArray.count)
+        return menuArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        
+        cell.menuImageView.image = UIImage(named: menuArray[indexPath.row])
         
         return cell
     }
