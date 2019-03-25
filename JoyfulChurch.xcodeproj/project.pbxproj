@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B6A1CCA511A3B9F84F0D37 /* Pods_JoyfulChurch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DD427BA932871EE5EA9885 /* Pods_JoyfulChurch.framework */; };
 		23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23229D37222D58CC00B472CD /* MoreViewController.swift */; };
 		234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224DA2217D70A0062B8CB /* AppDelegate.swift */; };
 		234224DD2217D70A0062B8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224DC2217D70A0062B8CB /* ViewController.swift */; };
@@ -19,9 +20,8 @@
 		23509D9E2240067300872F81 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23509D9C2240067300872F81 /* MenuCell.xib */; };
 		23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509D9F224904EC00872F81 /* MessageViewController.swift */; };
 		23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAD91B2226C82D00C76E48 /* HomeViewController.swift */; };
-		2E187AA85C6A8CB3DFC39CB6 /* Pods_JoyfulChurchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42B3FAD5E2C0885C673F634 /* Pods_JoyfulChurchTests.framework */; };
-		E16BB0D6F220699553CDA71D /* Pods_JoyfulChurch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABE45BF3AC69DAB7AD8101D /* Pods_JoyfulChurch.framework */; };
-		E7C8A0CE896E0DF852B3F84A /* Pods_JoyfulChurchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8613A4E3ED2F4A03521C3DE7 /* Pods_JoyfulChurchUITests.framework */; };
+		42565F9EE989FB1CA90B31E6 /* Pods_JoyfulChurchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58517CE815709B2CF3EA9723 /* Pods_JoyfulChurchTests.framework */; };
+		8B6CE79CFBA520C986D9FD43 /* Pods_JoyfulChurchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC8D5CF2E85046962D977B /* Pods_JoyfulChurchUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050044CE5DFDF1B1EFC9627F /* Pods-JoyfulChurch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurch.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch.debug.xcconfig"; sourceTree = "<group>"; };
 		23229D37222D58CC00B472CD /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		234224D72217D70A0062B8CB /* JoyfulChurch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoyfulChurch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		234224DA2217D70A0062B8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,15 +61,14 @@
 		23509D9C2240067300872F81 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		23509D9F224904EC00872F81 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		23EAD91B2226C82D00C76E48 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2E761857CC0FEFA25D21FDFC /* Pods-JoyfulChurch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurch.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch.release.xcconfig"; sourceTree = "<group>"; };
-		482B2CD9A5404C10E4A08024 /* Pods-JoyfulChurchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchTests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchTests/Pods-JoyfulChurchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		56B5D3AF27F5F621C2ECD64E /* Pods-JoyfulChurchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchTests.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchTests/Pods-JoyfulChurchTests.release.xcconfig"; sourceTree = "<group>"; };
-		741A145AB9295B26AA30C2D0 /* Pods-JoyfulChurch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurch.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch.debug.xcconfig"; sourceTree = "<group>"; };
-		8613A4E3ED2F4A03521C3DE7 /* Pods_JoyfulChurchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5A074C71D18E21AFA8EE09B /* Pods-JoyfulChurchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchUITests.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchUITests/Pods-JoyfulChurchUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BD0CE78F744EABF60BFF0AAB /* Pods-JoyfulChurchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchUITests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchUITests/Pods-JoyfulChurchUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D42B3FAD5E2C0885C673F634 /* Pods_JoyfulChurchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FABE45BF3AC69DAB7AD8101D /* Pods_JoyfulChurch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4633F136EE2BA74DA41055E4 /* Pods-JoyfulChurchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchTests.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchTests/Pods-JoyfulChurchTests.release.xcconfig"; sourceTree = "<group>"; };
+		4ED0B395D73AF0C7B2708D09 /* Pods-JoyfulChurchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchTests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchTests/Pods-JoyfulChurchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51DD427BA932871EE5EA9885 /* Pods_JoyfulChurch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58517CE815709B2CF3EA9723 /* Pods_JoyfulChurchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6592E37405B255CFF656C6C2 /* Pods-JoyfulChurchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchUITests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchUITests/Pods-JoyfulChurchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6FBC8D5CF2E85046962D977B /* Pods_JoyfulChurchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F4672DF662E1BFA5408445 /* Pods-JoyfulChurchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchUITests.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchUITests/Pods-JoyfulChurchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E75D2D6B654E6C72BC0949BC /* Pods-JoyfulChurch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurch.release.xcconfig"; path = "Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16BB0D6F220699553CDA71D /* Pods_JoyfulChurch.framework in Frameworks */,
+				02B6A1CCA511A3B9F84F0D37 /* Pods_JoyfulChurch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E187AA85C6A8CB3DFC39CB6 /* Pods_JoyfulChurchTests.framework in Frameworks */,
+				42565F9EE989FB1CA90B31E6 /* Pods_JoyfulChurchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,23 +92,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7C8A0CE896E0DF852B3F84A /* Pods_JoyfulChurchUITests.framework in Frameworks */,
+				8B6CE79CFBA520C986D9FD43 /* Pods_JoyfulChurchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19D8A12F7610EA6521DB3B2D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FABE45BF3AC69DAB7AD8101D /* Pods_JoyfulChurch.framework */,
-				D42B3FAD5E2C0885C673F634 /* Pods_JoyfulChurchTests.framework */,
-				8613A4E3ED2F4A03521C3DE7 /* Pods_JoyfulChurchUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		234224CE2217D70A0062B8CB = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +107,7 @@
 				234224F92217D70D0062B8CB /* JoyfulChurchUITests */,
 				234224D82217D70A0062B8CB /* Products */,
 				948B98CB1D930A6CA5000C93 /* Pods */,
-				19D8A12F7610EA6521DB3B2D /* Frameworks */,
+				74CA5ED25D8B5D46927A6826 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -168,15 +158,25 @@
 			path = JoyfulChurchUITests;
 			sourceTree = "<group>";
 		};
+		74CA5ED25D8B5D46927A6826 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51DD427BA932871EE5EA9885 /* Pods_JoyfulChurch.framework */,
+				58517CE815709B2CF3EA9723 /* Pods_JoyfulChurchTests.framework */,
+				6FBC8D5CF2E85046962D977B /* Pods_JoyfulChurchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		948B98CB1D930A6CA5000C93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				741A145AB9295B26AA30C2D0 /* Pods-JoyfulChurch.debug.xcconfig */,
-				2E761857CC0FEFA25D21FDFC /* Pods-JoyfulChurch.release.xcconfig */,
-				482B2CD9A5404C10E4A08024 /* Pods-JoyfulChurchTests.debug.xcconfig */,
-				56B5D3AF27F5F621C2ECD64E /* Pods-JoyfulChurchTests.release.xcconfig */,
-				BD0CE78F744EABF60BFF0AAB /* Pods-JoyfulChurchUITests.debug.xcconfig */,
-				A5A074C71D18E21AFA8EE09B /* Pods-JoyfulChurchUITests.release.xcconfig */,
+				050044CE5DFDF1B1EFC9627F /* Pods-JoyfulChurch.debug.xcconfig */,
+				E75D2D6B654E6C72BC0949BC /* Pods-JoyfulChurch.release.xcconfig */,
+				4ED0B395D73AF0C7B2708D09 /* Pods-JoyfulChurchTests.debug.xcconfig */,
+				4633F136EE2BA74DA41055E4 /* Pods-JoyfulChurchTests.release.xcconfig */,
+				6592E37405B255CFF656C6C2 /* Pods-JoyfulChurchUITests.debug.xcconfig */,
+				99F4672DF662E1BFA5408445 /* Pods-JoyfulChurchUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,11 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 234224FF2217D70D0062B8CB /* Build configuration list for PBXNativeTarget "JoyfulChurch" */;
 			buildPhases = (
-				B25A3D806FDC9E8EED1A5EF5 /* [CP] Check Pods Manifest.lock */,
+				47EA3CDAC4921B923C6C2913 /* [CP] Check Pods Manifest.lock */,
 				234224D32217D70A0062B8CB /* Sources */,
 				234224D42217D70A0062B8CB /* Frameworks */,
 				234224D52217D70A0062B8CB /* Resources */,
-				6AE434F04139347135E09CFD /* [CP] Embed Pods Frameworks */,
+				7E299A58A2E462D582F71692 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,7 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 234225022217D70D0062B8CB /* Build configuration list for PBXNativeTarget "JoyfulChurchTests" */;
 			buildPhases = (
-				589F0C505B0F4CEA83F3849E /* [CP] Check Pods Manifest.lock */,
+				917BBB1479672123AB5696D2 /* [CP] Check Pods Manifest.lock */,
 				234224E72217D70D0062B8CB /* Sources */,
 				234224E82217D70D0062B8CB /* Frameworks */,
 				234224E92217D70D0062B8CB /* Resources */,
@@ -226,7 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 234225052217D70D0062B8CB /* Build configuration list for PBXNativeTarget "JoyfulChurchUITests" */;
 			buildPhases = (
-				084D869F7BB42AA7FDA7BE3D /* [CP] Check Pods Manifest.lock */,
+				DDD4E05F6C565113D09220AC /* [CP] Check Pods Manifest.lock */,
 				234224F22217D70D0062B8CB /* Sources */,
 				234224F32217D70D0062B8CB /* Frameworks */,
 				234224F42217D70D0062B8CB /* Resources */,
@@ -313,7 +313,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		084D869F7BB42AA7FDA7BE3D /* [CP] Check Pods Manifest.lock */ = {
+		47EA3CDAC4921B923C6C2913 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,36 +328,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JoyfulChurchUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-JoyfulChurch-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		589F0C505B0F4CEA83F3849E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JoyfulChurchTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6AE434F04139347135E09CFD /* [CP] Embed Pods Frameworks */ = {
+		7E299A58A2E462D582F71692 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,7 +373,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B25A3D806FDC9E8EED1A5EF5 /* [CP] Check Pods Manifest.lock */ = {
+		917BBB1479672123AB5696D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,7 +388,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JoyfulChurch-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-JoyfulChurchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD4E05F6C565113D09220AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JoyfulChurchUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -602,7 +602,7 @@
 		};
 		234225002217D70D0062B8CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 741A145AB9295B26AA30C2D0 /* Pods-JoyfulChurch.debug.xcconfig */;
+			baseConfigurationReference = 050044CE5DFDF1B1EFC9627F /* Pods-JoyfulChurch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -621,7 +621,7 @@
 		};
 		234225012217D70D0062B8CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E761857CC0FEFA25D21FDFC /* Pods-JoyfulChurch.release.xcconfig */;
+			baseConfigurationReference = E75D2D6B654E6C72BC0949BC /* Pods-JoyfulChurch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -640,7 +640,7 @@
 		};
 		234225032217D70D0062B8CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 482B2CD9A5404C10E4A08024 /* Pods-JoyfulChurchTests.debug.xcconfig */;
+			baseConfigurationReference = 4ED0B395D73AF0C7B2708D09 /* Pods-JoyfulChurchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,7 +662,7 @@
 		};
 		234225042217D70D0062B8CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56B5D3AF27F5F621C2ECD64E /* Pods-JoyfulChurchTests.release.xcconfig */;
+			baseConfigurationReference = 4633F136EE2BA74DA41055E4 /* Pods-JoyfulChurchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -684,7 +684,7 @@
 		};
 		234225062217D70D0062B8CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD0CE78F744EABF60BFF0AAB /* Pods-JoyfulChurchUITests.debug.xcconfig */;
+			baseConfigurationReference = 6592E37405B255CFF656C6C2 /* Pods-JoyfulChurchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -705,7 +705,7 @@
 		};
 		234225072217D70D0062B8CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5A074C71D18E21AFA8EE09B /* Pods-JoyfulChurchUITests.release.xcconfig */;
+			baseConfigurationReference = 99F4672DF662E1BFA5408445 /* Pods-JoyfulChurchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
