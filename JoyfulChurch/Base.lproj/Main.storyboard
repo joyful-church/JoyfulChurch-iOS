@@ -25,10 +25,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-ND-f22" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-Rd-sCM">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZ2-lC-4Ht" customClass="FSPagerView" customModule="FSPagerView">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -50,14 +50,14 @@
                                                     <constraint firstItem="el5-aK-ouU" firstAttribute="top" secondItem="fZ2-lC-4Ht" secondAttribute="bottom" id="DC2-E7-qb1"/>
                                                     <constraint firstItem="fZ2-lC-4Ht" firstAttribute="top" secondItem="dPR-Rd-sCM" secondAttribute="top" id="E7Q-3k-qx0"/>
                                                     <constraint firstAttribute="trailing" secondItem="fZ2-lC-4Ht" secondAttribute="trailing" id="EA3-KM-jwa"/>
-                                                    <constraint firstAttribute="height" constant="400" id="EEz-IM-WqE"/>
+                                                    <constraint firstAttribute="height" constant="350" id="EEz-IM-WqE"/>
                                                     <constraint firstItem="fZ2-lC-4Ht" firstAttribute="leading" secondItem="dPR-Rd-sCM" secondAttribute="leading" id="HPj-Ss-giv"/>
                                                     <constraint firstAttribute="trailing" secondItem="el5-aK-ouU" secondAttribute="trailing" id="VDZ-Fe-pE4"/>
                                                     <constraint firstItem="el5-aK-ouU" firstAttribute="leading" secondItem="dPR-Rd-sCM" secondAttribute="leading" id="isN-2t-noh"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv4-nz-gUQ">
-                                                <rect key="frame" x="0.0" y="420" width="414" height="800"/>
+                                                <rect key="frame" x="0.0" y="350" width="414" height="800"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-An-IPk">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
@@ -81,7 +81,7 @@
                                             <constraint firstAttribute="trailing" secondItem="dPR-Rd-sCM" secondAttribute="trailing" id="Szs-Dk-el2"/>
                                             <constraint firstItem="tv4-nz-gUQ" firstAttribute="leading" secondItem="mrA-ND-f22" secondAttribute="leading" id="Wqi-1R-iic"/>
                                             <constraint firstAttribute="bottom" secondItem="tv4-nz-gUQ" secondAttribute="bottom" id="maF-0v-1Pf"/>
-                                            <constraint firstItem="tv4-nz-gUQ" firstAttribute="top" secondItem="dPR-Rd-sCM" secondAttribute="bottom" constant="20" id="xKx-po-AiR"/>
+                                            <constraint firstItem="tv4-nz-gUQ" firstAttribute="top" secondItem="dPR-Rd-sCM" secondAttribute="bottom" id="xKx-po-AiR"/>
                                             <constraint firstItem="dPR-Rd-sCM" firstAttribute="top" secondItem="mrA-ND-f22" secondAttribute="top" id="yJn-IJ-xUn"/>
                                         </constraints>
                                     </view>
@@ -122,7 +122,7 @@
         <!--Item-->
         <scene sceneID="cdC-gR-ebx">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ofH-wa-T6a" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ofH-wa-T6a" customClass="MessageViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ej4-ji-2L8"/>
                         <viewControllerLayoutGuide type="bottom" id="wuA-wK-ll3"/>

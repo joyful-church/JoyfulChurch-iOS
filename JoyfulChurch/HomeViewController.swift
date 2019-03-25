@@ -49,9 +49,9 @@ class HomeViewController: UIViewController {
     }
     
     private func navagationBarStatus(offset: CGFloat) {
-        if(offset > 150){
+        if(offset > 50){
             self.navigationController?.navigationBar.isHidden = false
-            self.navigationController?.navigationBar.alpha = (offset - 150) / 50
+            self.navigationController?.navigationBar.alpha = (offset - 50) / 50
         }else{
             self.navigationController?.navigationBar.isHidden = true
         }
@@ -67,6 +67,7 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.navigationBar.isHidden = true
         
     }
+    
     //MARK:: - Method
     private func setController() {
         self.menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
@@ -96,6 +97,8 @@ class HomeViewController: UIViewController {
         self.title = "JOYFUL"
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 3.0
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(viewDidAppear(_:)), name: .NSExtensionHostWillEnterForeground, object: nil)
     }
     
 
@@ -122,14 +125,18 @@ extension HomeViewController: FSPagerViewDelegate {
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
         self.pageControl.currentPage = targetIndex
     }
+    
+    func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
+        self.pageControl.currentPage = pagerView.currentIndex
+    }
 }
 
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let OffsetY = scrollView.contentOffset.y
-        if(OffsetY > 150){
+        if(OffsetY > 50){
             self.navigationController?.navigationBar.isHidden = false
-            self.navigationController?.navigationBar.alpha = (OffsetY - 150) / 50
+            self.navigationController?.navigationBar.alpha = (OffsetY - 50) / 50
         }else{
             self.navigationController?.navigationBar.isHidden = true
         }
@@ -140,6 +147,10 @@ extension HomeViewController: UIScrollViewDelegate {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MENUCELLHEIGHT
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
