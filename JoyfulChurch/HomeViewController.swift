@@ -64,8 +64,12 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        self.navigationController?.navigationBar.isHidden = true
         
+    }
+    
+    @objc private func enterForeground() {
+        self.navigationController?.navigationBar.isHidden = true
+        navagationBarStatus(offset: self.scrollView.contentOffset.y)
     }
     
     //MARK:: - Method
@@ -98,7 +102,7 @@ class HomeViewController: UIViewController {
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 3.0
         
-        NotificationCenter.default.addObserver(self, selector: #selector(viewDidAppear(_:)), name: .NSExtensionHostWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
 
