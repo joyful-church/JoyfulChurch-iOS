@@ -40,18 +40,17 @@ class HomeViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("viewWillAppear")
     }
     
     private func navagationBarStatus(offset: CGFloat) {
+        self.navigationController?.navigationBar.isHidden = true
         if(offset > 50){
             self.navigationController?.navigationBar.isHidden = false
             self.navigationController?.navigationBar.alpha = (offset - 50) / 50
+            
         }else{
             self.navigationController?.navigationBar.isHidden = true
         }
@@ -59,17 +58,23 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("viewDidAppear")
         navagationBarStatus(offset: self.scrollView.contentOffset.y)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        print("viewWillDisappear")
     }
     
     @objc private func enterForeground() {
+        print("enterForeground")
         self.navigationController?.navigationBar.isHidden = true
         navagationBarStatus(offset: self.scrollView.contentOffset.y)
+    }
+    
+    @objc func enterBackground() {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     //MARK:: - Method
@@ -102,7 +107,7 @@ class HomeViewController: UIViewController {
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 3.0
         
-        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
