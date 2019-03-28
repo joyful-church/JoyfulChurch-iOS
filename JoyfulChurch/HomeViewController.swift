@@ -103,6 +103,7 @@ class HomeViewController: UIViewController {
         pagerView.automaticSlidingInterval = 3.0
         
         NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
 
