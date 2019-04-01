@@ -1,15 +1,14 @@
-//
-//  MoreViewController.swift
-//  JoyfulChurch
-//
-//  Created by SIMA on 04/03/2019.
-//  Copyright © 2019 JoyfulChurch. All rights reserved.
-//
-
 import UIKit
+import SnapKit
+
+let MORECELL_HEIGHT: CGFloat = 80
 
 class MoreViewController: UIViewController {
 
+    @IBOutlet weak var moreTableView: UITableView!
+    
+    let moreTitleArray: [String] = ["교회 소개", "목사님 소개", "선교 히스토리"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +29,9 @@ class MoreViewController: UIViewController {
     }
     
     private func setController() {
+        self.moreTableView.delegate = self
+        self.moreTableView.dataSource = self
+        
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
         self.navigationController?.navigationBar.tintColor = .white
@@ -39,4 +41,27 @@ class MoreViewController: UIViewController {
     }
 
 
+}
+
+extension MoreViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return MORECELL_HEIGHT
+    }
+}
+
+extension MoreViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        moreTableView.snp.makeConstraints { (make) in
+            make.height.equalTo(MORECELL_HEIGHT * CGFloat(moreTitleArray.count))
+        }
+        return moreTitleArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell!.textLabel?.text = moreTitleArray[indexPath.row]
+        return cell!
+    }
+    
+    
 }

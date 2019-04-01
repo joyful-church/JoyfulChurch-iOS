@@ -19,7 +19,9 @@ target 'JoyfulChurch' do
 
   #PagerView
   pod 'FSPagerView'
-
+  
+  #SnapKit
+  pod 'SnapKit'
   # Pods for JoyfulChurch
 
   target 'JoyfulChurchTests' do
