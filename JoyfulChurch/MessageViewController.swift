@@ -37,7 +37,7 @@ class MessageViewController: UIViewController {
         if((self.navigationController?.navigationBar.isHidden)!){
             
         }
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
     }
     
     //MARK: - Method
@@ -53,12 +53,12 @@ class MessageViewController: UIViewController {
 }
 
 extension MessageViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        print(viewController)
-        return true
-    }
-    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if(viewController != self.tabBarController?.viewControllers![0]){
+            self.navigationController?.navigationBar.isHidden = false
+        }else{
+            self.navigationController?.navigationBar.isHidden = true
+        }
         print(self)
         print("selectedViewcontroller", tabBarController.selectedViewController)
         print("viewcontroller", viewController)

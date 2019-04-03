@@ -32,7 +32,7 @@ class MoreViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("viewWillDisappear")
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
     }
     
     //MARK: - Method
@@ -51,6 +51,8 @@ class MoreViewController: UIViewController {
 
 extension MoreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        moreTableViewHeight.constant = MORECELL_HEIGHT * CGFloat(moreTitleArray.count)
+        self.view.layoutIfNeeded()
         return MORECELL_HEIGHT
     }
 }
@@ -61,6 +63,7 @@ extension MoreViewController: UITableViewDataSource {
         print(moreTableViewHeight.constant)
         print(moreTableView.contentSize.height)
         print(moreTitleArray.count)
+        
 //        moreTableView.snp.makeConstraints { (make) in
 //            make.height.equalTo(MORECELL_HEIGHT * CGFloat(moreTitleArray.count))
 //        }
@@ -69,9 +72,21 @@ extension MoreViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        moreTableViewHeight.constant = MORECELL_HEIGHT * CGFloat(moreTitleArray.count)
         cell!.textLabel?.text = moreTitleArray[indexPath.row]
         return cell!
     }
-    
-    
+}
+
+extension MoreViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if(viewController != self.tabBarController?.viewControllers![0]){
+            self.navigationController?.navigationBar.isHidden = false
+        }else{
+            self.navigationController?.navigationBar.isHidden = true
+        }
+        print(self)
+        print("selectedViewcontroller", tabBarController.selectedViewController)
+        print("viewcontroller", viewController)
+    }
 }
