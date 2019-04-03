@@ -42,18 +42,9 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(enterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
         print("viewWillAppear")
-    }
-    
-    private func navagationBarStatus(offset: CGFloat) {
-        self.navigationController?.navigationBar.isHidden = true
-        if(offset > 50){
-            self.navigationController?.navigationBar.isHidden = false
-            self.navigationController?.navigationBar.alpha = (offset - 50) / 50
-            
-        }else{
-            self.navigationController?.navigationBar.isHidden = true
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,17 +55,10 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
         print("viewWillDisappear")
-    }
-    
-    @objc private func enterForeground() {
-        print("enterForeground")
-        self.navigationController?.navigationBar.isHidden = true
-        navagationBarStatus(offset: self.scrollView.contentOffset.y)
-    }
-    
-    @objc func enterBackground() {
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     //MARK:: - Method
@@ -105,10 +89,29 @@ class HomeViewController: UIViewController {
         
         self.title = "JOYFUL"
         pagerView.isInfinite = true
-        pagerView.automaticSlidingInterval = 3.0
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(enterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+        pagerView.automaticSlidingInterval = 10.0
+    }
+    
+    private func navagationBarStatus(offset: CGFloat) {
+        self.navigationController?.navigationBar.isHidden = true
+        if(offset > 50){
+            self.navigationController?.navigationBar.isHidden = false
+            self.navigationController?.navigationBar.alpha = (offset - 50) / 50
+            
+        }else{
+            self.navigationController?.navigationBar.isHidden = true
+        }
+    }
+    
+    @objc private func enterForeground() {
+        print("enterForeground")
+        self.navigationController?.navigationBar.isHidden = true
+        navagationBarStatus(offset: self.scrollView.contentOffset.y)
+    }
+    
+    @objc func enterBackground() {
+        print("enterBackground")
+        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -149,7 +152,6 @@ extension HomeViewController: UIScrollViewDelegate {
             self.navigationController?.navigationBar.isHidden = true
         }
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate {

@@ -7,26 +7,40 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MessageViewController: UIViewController {
-
+    
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.tabBarController?.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ViewWillAppear")
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("ViewDidAppear")
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.alpha = 1.0
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("ViewWillDisappear")
+        if((self.navigationController?.navigationBar.isHidden)!){
+            
+        }
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    //MARK: - Method
     private func setContoller() {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
@@ -36,4 +50,17 @@ class MessageViewController: UIViewController {
         self.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
     }
 
+}
+
+extension MessageViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        print(viewController)
+        return true
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print(self)
+        print("selectedViewcontroller", tabBarController.selectedViewController)
+        print("viewcontroller", viewController)
+    }
 }
