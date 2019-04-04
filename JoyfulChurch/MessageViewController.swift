@@ -9,13 +9,17 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import WebKit
 
 class MessageViewController: UIViewController {
+    
+    let webView: WKWebView = WKWebView()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.delegate = self
+        setContoller()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,12 +46,20 @@ class MessageViewController: UIViewController {
     
     //MARK: - Method
     private func setContoller() {
+        //네비게이션 설정
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
         self.navigationController?.navigationBar.tintColor = .white
+        //탭바 설정
         self.tabBarController?.tabBar.tintColor = .white
         self.tabBarItem.image = UIImage(named: "More")
         self.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+        self.tabBarController?.delegate = self
+        //웹뷰 설정
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        let request = URLRequest(url: URL(string: "https://www.youtube.com/user/jointhebibleproject/videos")!)
+        webView.load(request)
     }
 
 }
@@ -59,8 +71,17 @@ extension MessageViewController: UITabBarControllerDelegate {
         }else{
             self.navigationController?.navigationBar.isHidden = true
         }
-        print(self)
-        print("selectedViewcontroller", tabBarController.selectedViewController)
-        print("viewcontroller", viewController)
     }
+}
+
+extension MessageViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
+            print(html)
+        }
+    }
+}
+
+extension MessageViewController: WKUIDelegate {
+    
 }
