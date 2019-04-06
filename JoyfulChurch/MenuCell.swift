@@ -16,11 +16,19 @@ class MenuCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func getSegueIdentifierFromSelectedRows(indexPath: IndexPath) -> String {
+        if(indexPath.row == 0){
+            return "EventSegue"
+        }else if(indexPath.row == 1){
+            return "ConnectSegue"
+        }else if(indexPath.row == 2){
+            return "PraySegue"
+        }else if(indexPath.row == 3){
+            return "SocialSegue"
+        }else{
+            return ""
+        }
     }
     
     func setLayout(){

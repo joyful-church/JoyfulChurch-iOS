@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A106CF8757193130EC0F067 /* Pods_JoyfulChurchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90808A1A07010110DA8B3576 /* Pods_JoyfulChurchUITests.framework */; };
 		23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23229D37222D58CC00B472CD /* MoreViewController.swift */; };
+		232681DB22585C86007B1E42 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232681DA22585C86007B1E42 /* EventViewController.swift */; };
+		232681DD22585C9E007B1E42 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232681DC22585C9E007B1E42 /* ConnectViewController.swift */; };
+		232681DF22585CB7007B1E42 /* PrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232681DE22585CB7007B1E42 /* PrayViewController.swift */; };
+		232681E122585CC4007B1E42 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232681E022585CC4007B1E42 /* SocialViewController.swift */; };
 		234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234224DA2217D70A0062B8CB /* AppDelegate.swift */; };
 		234224E02217D70A0062B8CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234224DE2217D70A0062B8CB /* Main.storyboard */; };
 		234224E22217D70D0062B8CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234224E12217D70D0062B8CB /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		1D975D019AA8C6954CE1374C /* Pods-JoyfulChurchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchTests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchTests/Pods-JoyfulChurchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		23229D37222D58CC00B472CD /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		232681DA22585C86007B1E42 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		232681DC22585C9E007B1E42 /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		232681DE22585CB7007B1E42 /* PrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayViewController.swift; sourceTree = "<group>"; };
+		232681E022585CC4007B1E42 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		234224D72217D70A0062B8CB /* JoyfulChurch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoyfulChurch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		234224DA2217D70A0062B8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		234224DF2217D70A0062B8CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +133,10 @@
 			children = (
 				234224DA2217D70A0062B8CB /* AppDelegate.swift */,
 				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
+				232681DA22585C86007B1E42 /* EventViewController.swift */,
+				232681DC22585C9E007B1E42 /* ConnectViewController.swift */,
+				232681DE22585CB7007B1E42 /* PrayViewController.swift */,
+				232681E022585CC4007B1E42 /* SocialViewController.swift */,
 				23509D9B2240067300872F81 /* MenuCell.swift */,
 				23509D9C2240067300872F81 /* MenuCell.xib */,
 				23509D9F224904EC00872F81 /* MessageViewController.swift */,
@@ -423,11 +435,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232681DD22585C9E007B1E42 /* ConnectViewController.swift in Sources */,
 				23509D9D2240067300872F81 /* MenuCell.swift in Sources */,
 				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
 				234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */,
 				23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */,
 				23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */,
+				232681E122585CC4007B1E42 /* SocialViewController.swift in Sources */,
+				232681DF22585CB7007B1E42 /* PrayViewController.swift in Sources */,
+				232681DB22585C86007B1E42 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

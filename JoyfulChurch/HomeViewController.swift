@@ -161,7 +161,14 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        let segue = cell.getSegueIdentifierFromSelectedRows(indexPath: indexPath)
+        self.performSegue(withIdentifier: segue, sender: nil)
     }
+    
+//    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+////        return false
+//    }
 }
 
 extension HomeViewController: UITableViewDataSource {

@@ -9,6 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Event View Controller-->
+        <scene sceneID="ZM6-1Q-YPW">
+            <objects>
+                <viewController id="grn-W3-4BS" customClass="EventViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j07-EA-Qd4"/>
+                        <viewControllerLayoutGuide type="bottom" id="JZf-rm-tD3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RCI-ib-yt5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ldy-Rd-4LZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1681" y="1690"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="vmk-mX-NgI">
             <objects>
@@ -113,11 +131,15 @@
                         <outlet property="pageControl" destination="el5-aK-ouU" id="E6G-IL-WLN"/>
                         <outlet property="pagerView" destination="fZ2-lC-4Ht" id="zmt-wO-gng"/>
                         <outlet property="scrollView" destination="9kO-LJ-owJ" id="Ahr-rm-dWa"/>
+                        <segue destination="grn-W3-4BS" kind="show" identifier="EventSegue" id="yF1-Zo-Hj2"/>
+                        <segue destination="WIo-kM-EKr" kind="show" identifier="ConnectSegue" id="oUv-Oq-BC3"/>
+                        <segue destination="xR5-pd-IzJ" kind="show" identifier="PraySegue" id="KZ6-Kj-xBc"/>
+                        <segue destination="Uup-zz-ByM" kind="show" identifier="SocialSegue" id="Drl-jx-Xkd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRS-Vf-igk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969.56521739130437" y="953.57142857142856"/>
+            <point key="canvasLocation" x="-590" y="954"/>
         </scene>
         <!--Item-->
         <scene sceneID="cdC-gR-ebx">
@@ -281,6 +303,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veC-nf-KeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676" y="154.27286356821591"/>
+        </scene>
+        <!--Pray View Controller-->
+        <scene sceneID="eFp-jV-ojr">
+            <objects>
+                <viewController id="xR5-pd-IzJ" customClass="PrayViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dkQ-Yi-3Wq"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUU-Su-4hP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KNe-Hb-wmy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDo-d7-dKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-232" y="1690"/>
+        </scene>
+        <!--Connect View Controller-->
+        <scene sceneID="u3G-1u-63c">
+            <objects>
+                <viewController id="WIo-kM-EKr" customClass="ConnectViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKx-IT-LN2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Em4-6n-snH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ic-XI-9Vi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8d5-or-XFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-951" y="1690"/>
+        </scene>
+        <!--Social View Controller-->
+        <scene sceneID="ZGs-YV-DSl">
+            <objects>
+                <viewController id="Uup-zz-ByM" customClass="SocialViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LdY-2e-fIy"/>
+                        <viewControllerLayoutGuide type="bottom" id="aWW-4p-qlm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xZK-1B-fkb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TY4-7K-0Oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="1690"/>
         </scene>
     </scenes>
 </document>

@@ -79,6 +79,9 @@ extension MessageViewController: WKNavigationDelegate {
         webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
             print(html)
         }
+        webView.evaluateJavaScript("document.body.textContent") { (html, error) in
+            print(html)
+        }
     }
 }
 
