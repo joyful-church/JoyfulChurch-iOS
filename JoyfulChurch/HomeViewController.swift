@@ -166,9 +166,14 @@ extension HomeViewController: UITableViewDelegate {
         self.performSegue(withIdentifier: segue, sender: nil)
     }
     
-//    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-////        return false
-//    }
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        cell.contentView.backgroundColor = .white
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
