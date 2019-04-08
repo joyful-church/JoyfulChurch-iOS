@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SnapKit
 
 class EventViewController: UIViewController {
 
+    var tableView = UITableView()
+    
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +40,13 @@ class EventViewController: UIViewController {
 
     //MARK: - Method
     private func setController(){
-//        self.navigationItem.backBarButtonItem?.title = " "
-//        let item = UIBarButtonItem(image: UIImage(named: "NaviBack"), style: .plain, target: self, action: #selector(backButtonAction))
-//        let item = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-//        self.navigationItem.leftBarButtonItem = item
-//        self.navigationItem.leftBarButtonItem?.title = ""
-        
-    }
-    
-    @objc private func backButtonAction(){
-        self.navigationController?.popViewController(animated: true)
-    }
-        
-    
+        self.view.addSubview(tableView)
+        self.tableView.snp.makeConstraints { (make) in
+
+            make.top.equalTo(self.view)
+            make.leading.equalTo(self.view)
+            make.trailing.equalTo(self.view)
+            make.bottom.equalTo(self.view)
+        }
+    }   
 }
