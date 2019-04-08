@@ -132,13 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				234224DA2217D70A0062B8CB /* AppDelegate.swift */,
-				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
-				232681DA22585C86007B1E42 /* EventViewController.swift */,
-				232681DC22585C9E007B1E42 /* ConnectViewController.swift */,
-				232681DE22585CB7007B1E42 /* PrayViewController.swift */,
-				232681E022585CC4007B1E42 /* SocialViewController.swift */,
-				23509D9B2240067300872F81 /* MenuCell.swift */,
-				23509D9C2240067300872F81 /* MenuCell.xib */,
+				23F6E928225B9089007EA305 /* HomeController */,
 				23509D9F224904EC00872F81 /* MessageViewController.swift */,
 				23229D37222D58CC00B472CD /* MoreViewController.swift */,
 				234224DE2217D70A0062B8CB /* Main.storyboard */,
@@ -165,6 +159,20 @@
 				234224FC2217D70D0062B8CB /* Info.plist */,
 			);
 			path = JoyfulChurchUITests;
+			sourceTree = "<group>";
+		};
+		23F6E928225B9089007EA305 /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
+				232681DA22585C86007B1E42 /* EventViewController.swift */,
+				232681DC22585C9E007B1E42 /* ConnectViewController.swift */,
+				232681DE22585CB7007B1E42 /* PrayViewController.swift */,
+				232681E022585CC4007B1E42 /* SocialViewController.swift */,
+				23509D9B2240067300872F81 /* MenuCell.swift */,
+				23509D9C2240067300872F81 /* MenuCell.xib */,
+			);
+			path = HomeController;
 			sourceTree = "<group>";
 		};
 		75CE8EC1D8808BBF41DEB404 /* Frameworks */ = {

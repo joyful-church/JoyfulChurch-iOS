@@ -1,5 +1,5 @@
 //
-//  SocialViewController.swift
+//  EventViewController.swift
 //  JoyfulChurch
 //
 //  Created by SIMA on 06/04/2019.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SocialViewController: UIViewController {
+class EventViewController: UIViewController {
 
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setController()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,14 +34,20 @@ class SocialViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Method
+    private func setController(){
+//        self.navigationItem.backBarButtonItem?.title = " "
+//        let item = UIBarButtonItem(image: UIImage(named: "NaviBack"), style: .plain, target: self, action: #selector(backButtonAction))
+//        let item = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+//        self.navigationItem.leftBarButtonItem = item
+//        self.navigationItem.leftBarButtonItem?.title = ""
+        
     }
-    */
-
+    
+    @objc private func backButtonAction(){
+        self.navigationController?.popViewController(animated: true)
+    }
+        
+    
 }
