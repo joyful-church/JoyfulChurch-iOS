@@ -23,6 +23,8 @@
 		23509D9E2240067300872F81 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23509D9C2240067300872F81 /* MenuCell.xib */; };
 		23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509D9F224904EC00872F81 /* MessageViewController.swift */; };
 		23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAD91B2226C82D00C76E48 /* HomeViewController.swift */; };
+		23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6E929225E0FD8007EA305 /* EventCell.swift */; };
+		23F6E92C225E0FD8007EA305 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F6E92A225E0FD8007EA305 /* EventCell.xib */; };
 		438E2263D80BB87914BE6EF4 /* Pods_JoyfulChurch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42236F765085419E3164631B /* Pods_JoyfulChurch.framework */; };
 		F78396604A0B828398007E77 /* Pods_JoyfulChurchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4D917B347FA707EF62E8BE /* Pods_JoyfulChurchTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		23509D9C2240067300872F81 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		23509D9F224904EC00872F81 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		23EAD91B2226C82D00C76E48 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		23F6E929225E0FD8007EA305 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		23F6E92A225E0FD8007EA305 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		3FBFD75DE548C3667B12957F /* Pods-JoyfulChurch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurch.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurch/Pods-JoyfulChurch.debug.xcconfig"; sourceTree = "<group>"; };
 		42236F765085419E3164631B /* Pods_JoyfulChurch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoyfulChurch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		663172F869D5B05867566D4F /* Pods-JoyfulChurchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoyfulChurchUITests.debug.xcconfig"; path = "Target Support Files/Pods-JoyfulChurchUITests/Pods-JoyfulChurchUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			children = (
 				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
 				232681DA22585C86007B1E42 /* EventViewController.swift */,
+				23F6E929225E0FD8007EA305 /* EventCell.swift */,
+				23F6E92A225E0FD8007EA305 /* EventCell.xib */,
 				232681DC22585C9E007B1E42 /* ConnectViewController.swift */,
 				232681DE22585CB7007B1E42 /* PrayViewController.swift */,
 				232681E022585CC4007B1E42 /* SocialViewController.swift */,
@@ -309,6 +315,7 @@
 				234224E52217D70D0062B8CB /* LaunchScreen.storyboard in Resources */,
 				234224E22217D70D0062B8CB /* Assets.xcassets in Resources */,
 				23509D9E2240067300872F81 /* MenuCell.xib in Resources */,
+				23F6E92C225E0FD8007EA305 /* EventCell.xib in Resources */,
 				234224E02217D70A0062B8CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +452,7 @@
 			files = (
 				232681DD22585C9E007B1E42 /* ConnectViewController.swift in Sources */,
 				23509D9D2240067300872F81 /* MenuCell.swift in Sources */,
+				23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */,
 				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
 				234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */,
 				23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */,
