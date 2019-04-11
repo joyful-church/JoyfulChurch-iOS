@@ -22,6 +22,8 @@
 		23509D9D2240067300872F81 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509D9B2240067300872F81 /* MenuCell.swift */; };
 		23509D9E2240067300872F81 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23509D9C2240067300872F81 /* MenuCell.xib */; };
 		23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23509D9F224904EC00872F81 /* MessageViewController.swift */; };
+		23838ED3225F6FE4003EB51E /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23838ED2225F6FE4003EB51E /* EventViewModel.swift */; };
+		23838EDA225F70D1003EB51E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23838ED9225F70D1003EB51E /* Message.swift */; };
 		23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAD91B2226C82D00C76E48 /* HomeViewController.swift */; };
 		23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6E929225E0FD8007EA305 /* EventCell.swift */; };
 		23F6E92C225E0FD8007EA305 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F6E92A225E0FD8007EA305 /* EventCell.xib */; };
@@ -68,6 +70,8 @@
 		23509D9B2240067300872F81 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		23509D9C2240067300872F81 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		23509D9F224904EC00872F81 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		23838ED2225F6FE4003EB51E /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		23838ED9225F70D1003EB51E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		23EAD91B2226C82D00C76E48 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		23F6E929225E0FD8007EA305 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		23F6E92A225E0FD8007EA305 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
@@ -137,8 +141,6 @@
 			children = (
 				234224DA2217D70A0062B8CB /* AppDelegate.swift */,
 				23F6E928225B9089007EA305 /* HomeController */,
-				23509D9F224904EC00872F81 /* MessageViewController.swift */,
-				23229D37222D58CC00B472CD /* MoreViewController.swift */,
 				234224DE2217D70A0062B8CB /* Main.storyboard */,
 				234224E12217D70D0062B8CB /* Assets.xcassets */,
 				234224E32217D70D0062B8CB /* LaunchScreen.storyboard */,
@@ -165,18 +167,94 @@
 			path = JoyfulChurchUITests;
 			sourceTree = "<group>";
 		};
-		23F6E928225B9089007EA305 /* HomeController */ = {
+		23838ECD225F6F8A003EB51E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				23838ECF225F6FA9003EB51E /* Main */,
+				23838ED1225F6FC7003EB51E /* Event */,
+				23838ED4225F7012003EB51E /* Connect */,
+				23838ED5225F701A003EB51E /* Pray */,
+				23838ED6225F7020003EB51E /* Social */,
+				23838ED7225F7047003EB51E /* Messages */,
+				23838ED8225F7062003EB51E /* More */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		23838ECE225F6F9E003EB51E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23838ED9225F70D1003EB51E /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23838ECF225F6FA9003EB51E /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				23EAD91B2226C82D00C76E48 /* HomeViewController.swift */,
+				23509D9B2240067300872F81 /* MenuCell.swift */,
+				23509D9C2240067300872F81 /* MenuCell.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		23838ED1225F6FC7003EB51E /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				23838ED2225F6FE4003EB51E /* EventViewModel.swift */,
 				232681DA22585C86007B1E42 /* EventViewController.swift */,
 				23F6E929225E0FD8007EA305 /* EventCell.swift */,
 				23F6E92A225E0FD8007EA305 /* EventCell.xib */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		23838ED4225F7012003EB51E /* Connect */ = {
+			isa = PBXGroup;
+			children = (
 				232681DC22585C9E007B1E42 /* ConnectViewController.swift */,
+			);
+			path = Connect;
+			sourceTree = "<group>";
+		};
+		23838ED5225F701A003EB51E /* Pray */ = {
+			isa = PBXGroup;
+			children = (
 				232681DE22585CB7007B1E42 /* PrayViewController.swift */,
+			);
+			path = Pray;
+			sourceTree = "<group>";
+		};
+		23838ED6225F7020003EB51E /* Social */ = {
+			isa = PBXGroup;
+			children = (
 				232681E022585CC4007B1E42 /* SocialViewController.swift */,
-				23509D9B2240067300872F81 /* MenuCell.swift */,
-				23509D9C2240067300872F81 /* MenuCell.xib */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		23838ED7225F7047003EB51E /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				23509D9F224904EC00872F81 /* MessageViewController.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		23838ED8225F7062003EB51E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				23229D37222D58CC00B472CD /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		23F6E928225B9089007EA305 /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				23838ECE225F6F9E003EB51E /* Models */,
+				23838ECD225F6F8A003EB51E /* Modules */,
 			);
 			path = HomeController;
 			sourceTree = "<group>";
@@ -453,11 +531,13 @@
 				232681DD22585C9E007B1E42 /* ConnectViewController.swift in Sources */,
 				23509D9D2240067300872F81 /* MenuCell.swift in Sources */,
 				23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */,
+				23838ED3225F6FE4003EB51E /* EventViewModel.swift in Sources */,
 				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
 				234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */,
 				23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */,
 				23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */,
 				232681E122585CC4007B1E42 /* SocialViewController.swift in Sources */,
+				23838EDA225F70D1003EB51E /* Message.swift in Sources */,
 				232681DF22585CB7007B1E42 /* PrayViewController.swift in Sources */,
 				232681DB22585C86007B1E42 /* EventViewController.swift in Sources */,
 			);
