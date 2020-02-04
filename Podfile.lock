@@ -75,7 +75,7 @@ DEPENDENCIES:
   - SnapKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Firebase
     - FirebaseAnalytics
@@ -111,4 +111,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c3ee6715fb767f4c4ca088d93adf7650c5880208
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.8.4
