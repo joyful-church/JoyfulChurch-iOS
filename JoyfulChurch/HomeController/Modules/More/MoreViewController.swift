@@ -18,20 +18,17 @@ class MoreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
         self.navigationController?.navigationBar.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("viewDidAppear")
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.alpha = 1.0
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("viewWillDisappear")
 //        self.navigationController?.navigationBar.isHidden = true
     }
     

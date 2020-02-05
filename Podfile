@@ -23,6 +23,9 @@ target 'JoyfulChurch' do
   #SnapKit
   pod 'SnapKit'
   # Pods for JoyfulChurch
+  
+  #Tabbar
+  pod 'ESTabBarController'
 
   target 'JoyfulChurchTests' do
     inherit! :search_paths
