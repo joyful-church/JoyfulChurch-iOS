@@ -27,6 +27,10 @@
 		23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EAD91B2226C82D00C76E48 /* HomeViewController.swift */; };
 		23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6E929225E0FD8007EA305 /* EventCell.swift */; };
 		23F6E92C225E0FD8007EA305 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F6E92A225E0FD8007EA305 /* EventCell.xib */; };
+		38AAA67223EB94CB008CB57E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAA67123EB94CB008CB57E /* MainTabbarController.swift */; };
+		38AAA67423EB952D008CB57E /* MainTabbarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAA67323EB952D008CB57E /* MainTabbarItemContentView.swift */; };
+		38AAA67723EB96CE008CB57E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAA67623EB96CE008CB57E /* UIColor+Extensions.swift */; };
+		38AAA67A23EB97AC008CB57E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAA67923EB97AC008CB57E /* BaseNavigationController.swift */; };
 		38AB443423EAA2F1008E678F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AB443323EAA2F1008E678F /* HomeViewModel.swift */; };
 		38AB443823EAA616008E678F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AB443623EAA616008E678F /* Log.swift */; };
 		38AB443923EAA616008E678F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AB443723EAA616008E678F /* Util.swift */; };
@@ -78,6 +82,10 @@
 		23EAD91B2226C82D00C76E48 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		23F6E929225E0FD8007EA305 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		23F6E92A225E0FD8007EA305 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		38AAA67123EB94CB008CB57E /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		38AAA67323EB952D008CB57E /* MainTabbarItemContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarItemContentView.swift; sourceTree = "<group>"; };
+		38AAA67623EB96CE008CB57E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		38AAA67923EB97AC008CB57E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		38AB443323EAA2F1008E678F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		38AB443623EAA616008E678F /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		38AB443723EAA616008E678F /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 		23838ECD225F6F8A003EB51E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				38AAA67823EB979A008CB57E /* Base */,
 				38AB443523EAA5FC008E678F /* Util */,
 				23838ECF225F6FA9003EB51E /* Main */,
 				23838ED1225F6FC7003EB51E /* Event */,
@@ -184,6 +193,8 @@
 				23838ED6225F7020003EB51E /* Social */,
 				23838ED7225F7047003EB51E /* Messages */,
 				23838ED8225F7062003EB51E /* More */,
+				38AAA67123EB94CB008CB57E /* MainTabbarController.swift */,
+				38AAA67323EB952D008CB57E /* MainTabbarItemContentView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -261,10 +272,27 @@
 		23F6E928225B9089007EA305 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
+				38AAA67523EB9693008CB57E /* Extensions */,
 				23838ECE225F6F9E003EB51E /* Models */,
 				23838ECD225F6F8A003EB51E /* Modules */,
 			);
 			path = HomeController;
+			sourceTree = "<group>";
+		};
+		38AAA67523EB9693008CB57E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38AAA67623EB96CE008CB57E /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		38AAA67823EB979A008CB57E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				38AAA67923EB97AC008CB57E /* BaseNavigationController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		38AB443523EAA5FC008E678F /* Util */ = {
@@ -527,14 +555,18 @@
 			files = (
 				232681DD22585C9E007B1E42 /* ConnectViewController.swift in Sources */,
 				23509D9D2240067300872F81 /* MenuCell.swift in Sources */,
+				38AAA67423EB952D008CB57E /* MainTabbarItemContentView.swift in Sources */,
 				23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */,
 				23838ED3225F6FE4003EB51E /* EventViewModel.swift in Sources */,
 				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
+				38AAA67A23EB97AC008CB57E /* BaseNavigationController.swift in Sources */,
 				234224DB2217D70A0062B8CB /* AppDelegate.swift in Sources */,
+				38AAA67723EB96CE008CB57E /* UIColor+Extensions.swift in Sources */,
 				23509DA0224904EC00872F81 /* MessageViewController.swift in Sources */,
 				38AB443923EAA616008E678F /* Util.swift in Sources */,
 				23EAD91C2226C82D00C76E48 /* HomeViewController.swift in Sources */,
 				38AB443823EAA616008E678F /* Log.swift in Sources */,
+				38AAA67223EB94CB008CB57E /* MainTabbarController.swift in Sources */,
 				38AB443423EAA2F1008E678F /* HomeViewModel.swift in Sources */,
 				232681E122585CC4007B1E42 /* SocialViewController.swift in Sources */,
 				23838EDA225F70D1003EB51E /* Message.swift in Sources */,

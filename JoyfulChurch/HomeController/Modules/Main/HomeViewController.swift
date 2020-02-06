@@ -75,16 +75,16 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
         self.navigationController?.navigationBar.tintColor = .white
         self.tabBarController?.tabBar.tintColor = .white
-        //탭바 설정
-        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "Home")
-        self.tabBarController?.tabBar.items?[0].title = "Home"
-        self.tabBarController?.tabBar.items?[0].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
-        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "Home")
-        self.tabBarController?.tabBar.items?[1].title = "Home"
-        self.tabBarController?.tabBar.items?[1].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
-        self.tabBarController?.tabBar.items?[2].image = UIImage(named: "More")
-        self.tabBarController?.tabBar.items?[2].title = "More"
-        self.tabBarController?.tabBar.items?[2].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+//        //탭바 설정
+//        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "Home")
+//        self.tabBarController?.tabBar.items?[0].title = "Home"
+//        self.tabBarController?.tabBar.items?[0].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+//        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "Home")
+//        self.tabBarController?.tabBar.items?[1].title = "Home"
+//        self.tabBarController?.tabBar.items?[1].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
+//        self.tabBarController?.tabBar.items?[2].image = UIImage(named: "More")
+//        self.tabBarController?.tabBar.items?[2].title = "More"
+//        self.tabBarController?.tabBar.items?[2].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
 //        self.tabBarItem.image = UIImage(named: "Home")
         
         self.title = "JOYFUL"

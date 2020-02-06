@@ -25,7 +25,7 @@ target 'JoyfulChurch' do
   # Pods for JoyfulChurch
   
   #Tabbar
-  pod 'ESTabBarController'
+  pod "ESTabBarController-swift"
 
   target 'JoyfulChurchTests' do
     inherit! :search_paths

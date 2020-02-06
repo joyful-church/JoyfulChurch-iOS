@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - ESTabBarController (0.2)
+  - ESTabBarController-swift (2.8.0)
   - Firebase (6.16.0):
     - Firebase/Core (= 6.16.0)
   - Firebase/Core (6.16.0):
@@ -89,7 +89,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - ESTabBarController
+  - ESTabBarController-swift
   - Firebase
   - FSPagerView
   - Kingfisher
@@ -101,7 +101,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - ESTabBarController
+    - ESTabBarController-swift
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -125,7 +125,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  ESTabBarController: e82ac0b135bec16fb646ac1da4ac8953fcd927da
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   Firebase: 497158b816d0a86fc31babbd05546fcd7e6083ff
   FirebaseAnalytics: cf95d3aab897612783020fbd98401d5366f135ee
   FirebaseCore: 85064903ed6c28e47fec9c7bd149d94ba1b6b6e7
@@ -147,6 +147,6 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: da98ebbf1a59a9f2e437df1bcc338ac86ccba00c
+PODFILE CHECKSUM: c631bff00168b9a59f1716db699dca1d5c8c470f
 
 COCOAPODS: 1.8.4
