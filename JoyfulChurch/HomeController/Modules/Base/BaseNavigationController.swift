@@ -21,6 +21,10 @@ class BaseNavigationController: UINavigationController {
     
     func setProperties() {
         view.backgroundColor = .white
+        self.navigationBar.tintColor = .white
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationBar.barTintColor = .black
+        self.navigationBar.isTranslucent = false
     }
     
 }

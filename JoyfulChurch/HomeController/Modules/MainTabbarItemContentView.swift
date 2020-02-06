@@ -49,7 +49,7 @@ final class MainTabBarItemContentView: ESTabBarItemContentView {
         renderingMode = .alwaysOriginal
         titleLabel.font = UIFont.systemFont(ofSize: 11, weight: .semibold)
         textColor = .brownishGrayCw
-        highlightTextColor = .blackCw
+        highlightTextColor = .whiteCw
         
         badgeColor = .redCw
         badgeView.badgeLabel.font = UIFont.systemFont(ofSize: 11, weight: .medium)

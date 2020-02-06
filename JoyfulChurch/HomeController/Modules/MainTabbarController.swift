@@ -34,19 +34,17 @@ final class MainTabBarController: ESTabBarController {
             switch self {
             case .home:
                 title = "JOYFUL"
-                normalImageName = "Home"
-                selectedImageName = "Home"
+                normalImageName = "unselectedHome"
+                selectedImageName = "selectedHome"
             case .message:
                 title = "MESSAGE"
-                normalImageName = "Home"
-                selectedImageName = "Home"
+                normalImageName = "unselectedMessage"
+                selectedImageName = "selectedMessage"
             case .more:
                 title = "MORE"
-                normalImageName = "Home"
-                selectedImageName = "Home"
+                normalImageName = "unselectedMore"
+                selectedImageName = "selectedMore"
             }
-            
-//            let navigationController = BaseNavigationController(rootViewController: UIViewController())
             
             let navigationController = BaseNavigationController(rootViewController: rootViewController(tabBarController: tabBarController))
             
@@ -62,8 +60,10 @@ final class MainTabBarController: ESTabBarController {
         private func rootViewController(tabBarController: UITabBarController) -> UIViewController {
             switch self {
             case .home:
-                let vc = UIViewController()
+                let sb = UIStoryboard.init(name: "Main", bundle: nil)
+                guard let vc = sb.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else { return UIViewController() }
                 return vc
+                
             case .message:
                 let vc = UIViewController()
                 let navigationController = UINavigationController(rootViewController: vc)
@@ -116,7 +116,9 @@ final class MainTabBarController: ESTabBarController {
     
     private func setProperties() {
         view.backgroundColor = .white
-        tabBar.backgroundColor = UIColor.fromRGB(250, 250, 250)
+        tabBar.barTintColor = .blackCw
+        tabBar.tintColor = .whiteCw
+        tabBar.unselectedItemTintColor = .brownGrayCw
     }
     
 //    private func setAnalytics() {

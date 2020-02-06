@@ -6,6 +6,7 @@ let MENUCELLHEIGHT: CGFloat = 460/3
 class HomeViewController: UIViewController {
 
     //MARK: - IBOutlet
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var pagerView: FSPagerView! {
         didSet {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -55,7 +56,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
+//        navigationController?.navigationBar.isHidden = false
         NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
         print("viewWillDisappear")
@@ -72,20 +73,6 @@ class HomeViewController: UIViewController {
         scrollView.delegate = self
         //네이게이션 설정
         self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
-        self.navigationController?.navigationBar.tintColor = .white
-        self.tabBarController?.tabBar.tintColor = .white
-//        //탭바 설정
-//        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "Home")
-//        self.tabBarController?.tabBar.items?[0].title = "Home"
-//        self.tabBarController?.tabBar.items?[0].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
-//        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "Home")
-//        self.tabBarController?.tabBar.items?[1].title = "Home"
-//        self.tabBarController?.tabBar.items?[1].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
-//        self.tabBarController?.tabBar.items?[2].image = UIImage(named: "More")
-//        self.tabBarController?.tabBar.items?[2].title = "More"
-//        self.tabBarController?.tabBar.items?[2].imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
-//        self.tabBarItem.image = UIImage(named: "Home")
         
         self.title = "JOYFUL"
         pagerView.isInfinite = true
@@ -93,25 +80,20 @@ class HomeViewController: UIViewController {
     }
     
     private func navagationBarStatus(offset: CGFloat) {
-        self.navigationController?.navigationBar.isHidden = true
         if(offset > 50){
-            self.navigationController?.navigationBar.isHidden = false
             self.navigationController?.navigationBar.alpha = (offset - 50) / 50
-            
         }else{
-            self.navigationController?.navigationBar.isHidden = true
+            
         }
     }
     
     @objc private func enterForeground() {
         print("enterForeground")
-        self.navigationController?.navigationBar.isHidden = true
         navagationBarStatus(offset: self.scrollView.contentOffset.y)
     }
     
     @objc func enterBackground() {
         print("enterBackground")
-        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -146,10 +128,8 @@ extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let OffsetY = scrollView.contentOffset.y
         if(OffsetY > 50){
-            self.navigationController?.navigationBar.isHidden = false
             self.navigationController?.navigationBar.alpha = (OffsetY - 50) / 50
         }else{
-            self.navigationController?.navigationBar.isHidden = true
         }
     }
 }
