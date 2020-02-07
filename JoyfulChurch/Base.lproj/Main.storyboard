@@ -109,19 +109,19 @@
                                     <constraint firstAttribute="trailing" secondItem="mrA-ND-f22" secondAttribute="trailing" id="nac-nO-Bdj"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W00-63-lrt">
+                            <view clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W00-63-lrt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-dM-i8W">
-                                        <rect key="frame" x="186" y="51" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOYFUL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-dM-i8W">
+                                        <rect key="frame" x="174" y="55.5" width="66" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="xBe-dM-i8W" secondAttribute="bottom" constant="16" id="56h-xx-dxN"/>
+                                    <constraint firstAttribute="bottom" secondItem="xBe-dM-i8W" secondAttribute="bottom" constant="12" id="56h-xx-dxN"/>
                                     <constraint firstAttribute="height" constant="88" id="9H2-j8-0X0"/>
                                     <constraint firstItem="xBe-dM-i8W" firstAttribute="centerX" secondItem="W00-63-lrt" secondAttribute="centerX" id="YCt-pj-t3w"/>
                                 </constraints>
@@ -143,7 +143,9 @@
                     <tabBarItem key="tabBarItem" title="" id="ICO-KA-Wsp"/>
                     <connections>
                         <outlet property="contentView" destination="mrA-ND-f22" id="SHn-tk-V7L"/>
+                        <outlet property="headerTitleLabel" destination="xBe-dM-i8W" id="TIZ-GX-OmA"/>
                         <outlet property="headerView" destination="W00-63-lrt" id="syV-c3-s34"/>
+                        <outlet property="headerViewHeightConstraint" destination="9H2-j8-0X0" id="lB3-ut-QOF"/>
                         <outlet property="menuBaseView" destination="tv4-nz-gUQ" id="CyN-RM-C5X"/>
                         <outlet property="menuBaseViewHeight" destination="914-cp-2OO" id="lEP-JV-l7K"/>
                         <outlet property="menuTableView" destination="BUn-An-IPk" id="RTq-xE-sTX"/>
@@ -160,49 +162,24 @@
             </objects>
             <point key="canvasLocation" x="-591.304347826087" y="953.57142857142856"/>
         </scene>
-        <!--Item-->
+        <!--MessageViewController-->
         <scene sceneID="cdC-gR-ebx">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ofH-wa-T6a" customClass="MessageViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageViewController" automaticallyAdjustsScrollViewInsets="NO" id="ofH-wa-T6a" userLabel="MessageViewController" customClass="MessageViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ej4-ji-2L8"/>
                         <viewControllerLayoutGuide type="bottom" id="wuA-wK-ll3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z1M-kG-8ic">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKp-6a-cct">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="966"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-bc-EVn" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOb-fx-gJh">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="cdh-yv-tzU"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN9-JI-WXc">
-                                                <rect key="frame" x="0.0" y="300" width="414" height="500"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="500" id="J7E-Rd-6fj"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="951"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="fOb-fx-gJh" firstAttribute="top" secondItem="Qqd-bc-EVn" secondAttribute="top" id="GGZ-vK-tfh"/>
-                                            <constraint firstItem="fOb-fx-gJh" firstAttribute="leading" secondItem="Qqd-bc-EVn" secondAttribute="leading" id="MYT-42-rzh"/>
-                                            <constraint firstItem="nN9-JI-WXc" firstAttribute="leading" secondItem="Qqd-bc-EVn" secondAttribute="leading" id="Nec-Do-YlW"/>
-                                            <constraint firstAttribute="bottom" secondItem="nN9-JI-WXc" secondAttribute="bottom" id="XzG-6U-UKy"/>
-                                            <constraint firstAttribute="trailing" secondItem="fOb-fx-gJh" secondAttribute="trailing" id="sbq-6q-uXE"/>
-                                            <constraint firstAttribute="trailing" secondItem="nN9-JI-WXc" secondAttribute="trailing" id="t4I-HQ-hEK"/>
-                                            <constraint firstItem="nN9-JI-WXc" firstAttribute="top" secondItem="fOb-fx-gJh" secondAttribute="bottom" constant="50" id="wsP-h9-pHe"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -224,16 +201,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="AN6-Yp-LpD"/>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="contentView" destination="Qqd-bc-EVn" id="vhG-jd-BII"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lY-ti-llf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1673.913043478261" y="953.57142857142856"/>
         </scene>
-        <!--Item-->
+        <!--MoreViewController-->
         <scene sceneID="Ya6-cp-PsS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2Z5-m9-hiQ" customClass="MoreViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" automaticallyAdjustsScrollViewInsets="NO" id="2Z5-m9-hiQ" userLabel="MoreViewController" customClass="MoreViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mQc-8F-s0B"/>
                         <viewControllerLayoutGuide type="bottom" id="m2A-eH-4my"/>

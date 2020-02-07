@@ -65,19 +65,13 @@ final class MainTabBarController: ESTabBarController {
                 return vc
                 
             case .message:
-                let vc = UIViewController()
-                let navigationController = UINavigationController(rootViewController: vc)
+                let sb = UIStoryboard.init(name: "Main", bundle: nil)
+                guard let vc = sb.instantiateViewController(withIdentifier: "MessageViewController") as? MessageViewController else { return UIViewController() }
                 return vc
-//                let navigator = DefaultMainNavigator(navigationController: navigationController,
-//                                                     parentViewController: vc)
-//                return navigator.toConsumeViewController()
             case .more:
-                let vc = UIViewController()
-                let navigationController = UINavigationController(rootViewController: vc)
+                let sb = UIStoryboard.init(name: "Main", bundle: nil)
+                guard let vc = sb.instantiateViewController(withIdentifier: "MoreViewController") as? MoreViewController else { return UIViewController() }
                 return vc
-//                let navigator = DefaultMainNavigator(navigationController: navigationController,
-//                                                     parentViewController: vc)
-//                return navigator.toMoreViewController()
             }
         }
     }

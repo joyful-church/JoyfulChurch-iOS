@@ -37,12 +37,8 @@ class MoreViewController: UIViewController {
         self.moreTableView.delegate = self
         self.moreTableView.dataSource = self
         
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.navigationBar.topItem?.title = "JOYFUL"
+        self.navigationController?.navigationBar.topItem?.title = "MORE"
         self.navigationController?.navigationBar.tintColor = .white
-        self.tabBarController?.tabBar.tintColor = .white
-        self.tabBarItem.image = UIImage(named: "More")
-        self.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: -3, right: 0)
     }
 }
 

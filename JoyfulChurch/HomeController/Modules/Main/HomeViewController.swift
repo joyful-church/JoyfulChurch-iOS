@@ -7,6 +7,8 @@ class HomeViewController: UIViewController {
 
     //MARK: - IBOutlet
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerTitleLabel: UILabel!
+    @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var pagerView: FSPagerView! {
         didSet {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -51,7 +53,6 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("viewDidAppear")
-        navagationBarStatus(offset: self.scrollView.contentOffset.y)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,17 +80,8 @@ class HomeViewController: UIViewController {
         pagerView.automaticSlidingInterval = 10.0
     }
     
-    private func navagationBarStatus(offset: CGFloat) {
-        if(offset > 50){
-            self.navigationController?.navigationBar.alpha = (offset - 50) / 50
-        }else{
-            
-        }
-    }
-    
     @objc private func enterForeground() {
         print("enterForeground")
-        navagationBarStatus(offset: self.scrollView.contentOffset.y)
     }
     
     @objc func enterBackground() {
@@ -126,10 +118,13 @@ extension HomeViewController: FSPagerViewDelegate {
 
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let OffsetY = scrollView.contentOffset.y
-        if(OffsetY > 50){
-            self.navigationController?.navigationBar.alpha = (OffsetY - 50) / 50
-        }else{
+        let offsetY = scrollView.contentOffset.y
+        if offsetY >= 0 && offsetY <= 50 {
+            headerView.alpha = offsetY / 50
+        } else if offsetY < 0 {
+            headerView.alpha = 0
+        } else {
+            headerView.alpha = 1
         }
     }
 }
