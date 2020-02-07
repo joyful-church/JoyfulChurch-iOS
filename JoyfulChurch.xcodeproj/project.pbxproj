@@ -62,7 +62,7 @@
 		232681DC22585C9E007B1E42 /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		232681DE22585CB7007B1E42 /* PrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayViewController.swift; sourceTree = "<group>"; };
 		232681E022585CC4007B1E42 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
-		234224D72217D70A0062B8CB /* JoyfulChurch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoyfulChurch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		234224D72217D70A0062B8CB /* JOYFUL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JOYFUL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		234224DA2217D70A0062B8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		234224DF2217D70A0062B8CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		234224E12217D70D0062B8CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		234224D82217D70A0062B8CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				234224D72217D70A0062B8CB /* JoyfulChurch.app */,
+				234224D72217D70A0062B8CB /* JOYFUL.app */,
 				234224EB2217D70D0062B8CB /* JoyfulChurchTests.xctest */,
 				234224F62217D70D0062B8CB /* JoyfulChurchUITests.xctest */,
 			);
@@ -346,7 +346,7 @@
 			);
 			name = JoyfulChurch;
 			productName = JoyfulChurch;
-			productReference = 234224D72217D70A0062B8CB /* JoyfulChurch.app */;
+			productReference = 234224D72217D70A0062B8CB /* JOYFUL.app */;
 			productType = "com.apple.product-type.application";
 		};
 		234224EA2217D70D0062B8CB /* JoyfulChurchTests */ = {
@@ -755,7 +755,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyfulchurch.JoyfulChurch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JOYFUL;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -774,7 +774,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joyfulchurch.JoyfulChurch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JOYFUL;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
