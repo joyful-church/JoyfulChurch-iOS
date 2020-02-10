@@ -25,9 +25,6 @@ target 'JoyfulChurch' do
   
   #Tabbar
   pod "ESTabBarController-swift"
-
-  #SwiftLint
-  pod 'SwiftLint'
   
   #Calendar
   pod 'JTAppleCalendar'
