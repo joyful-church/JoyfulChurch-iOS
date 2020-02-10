@@ -22,10 +22,16 @@ target 'JoyfulChurch' do
   
   #SnapKit
   pod 'SnapKit'
-  # Pods for JoyfulChurch
   
   #Tabbar
   pod "ESTabBarController-swift"
+
+  #SwiftLint
+  pod 'SwiftLint'
+  
+  #Calendar
+  pod 'JTAppleCalendar'
+  
 
   target 'JoyfulChurchTests' do
     inherit! :search_paths

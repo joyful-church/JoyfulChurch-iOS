@@ -11,28 +11,28 @@ import UIKit
 class MenuCell: UITableViewCell {
 
     @IBOutlet weak var menuImageView: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     func getSegueIdentifierFromSelectedRows(indexPath: IndexPath) -> String {
-        if(indexPath.row == 0){
+        if indexPath.row == 0 {
             return "EventSegue"
-        }else if(indexPath.row == 1){
+        } else if indexPath.row == 1 {
             return "ConnectSegue"
-        }else if(indexPath.row == 2){
+        } else if indexPath.row == 2 {
             return "PraySegue"
-        }else if(indexPath.row == 3){
+        } else if indexPath.row == 3 {
             return "SocialSegue"
-        }else{
+        } else {
             return ""
         }
     }
-    
-    func setLayout(){
-        
+
+    func setLayout() {
+
     }
-    
+
 }

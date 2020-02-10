@@ -13,12 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         let window = UIWindow(frame: UIScreen.main.bounds)
-               
+
         if #available(iOS 13, *) {
             window.overrideUserInterfaceStyle = .light
         }
@@ -28,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // For WHITE color:
         UITabBar.appearance().tintColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
         window.makeKeyAndVisible()
-        
+
         window.rootViewController = MainTabBarController()
         return true
     }
@@ -55,6 +54,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

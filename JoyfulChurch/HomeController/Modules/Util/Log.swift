@@ -25,7 +25,7 @@ class Log {
         print("==============================================================")
         #endif
     }
-    
+
     //info 정보들을 알려줄때 사용하자
     class func i(_ any: Any, filename: String = #file, funcName: String = #function) {
         #if DEBUG
@@ -39,14 +39,14 @@ class Log {
         print("[⁉️][\(sourceFileName(filePath: filename))] \(funcName) -> \(any)")
         #endif
     }
-    
+
     //tj's Log 개인취향존중 알아서 바꾸세여
     class func tj(_ any: Any, filename: String = #file, funcName: String = #function) {
         #if DEBUG
         print("[🐼tj][\(sourceFileName(filePath: filename))] \(funcName) -> \(any)")
         #endif
     }
-    
+
     private class func sourceFileName(filePath: String) -> String {
        let components = filePath.components(separatedBy: "/")
        return components.isEmpty ? "" : components.last!

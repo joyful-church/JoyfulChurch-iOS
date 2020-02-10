@@ -9,9 +9,9 @@
 import UIKit
 
 public extension UIColor {
-    
+
     // MARK: - CashDoc
-    
+
     class var yellowCw: UIColor {
         return UIColor.fromRGB(255, 210, 0)
     }
@@ -142,7 +142,7 @@ public extension UIColor {
         return UIColor.fromRGB(56, 106, 253)
     }
     // MARK: - Class methods
-    
+
     class func fromRGB(_ r: Double, _ g: Double, _ b: Double) -> UIColor {
         let const = 255.0
         return UIColor(red: CGFloat(r / const), green: CGFloat(g / const), blue: CGFloat(b / const), alpha: 1.0)

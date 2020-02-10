@@ -13,19 +13,19 @@ import WebKit
 import SnapKit
 
 class MessageViewController: UIViewController {
-    
+
     let webView: WKWebView = WKWebView()
     @IBOutlet weak var contentView: UIView!
-    
-    //MARK: - Life Cycle
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setContoller()
         contentView.addSubview(webView)
         layout()
     }
-    
-    //MARK: - Method
+
+    // MARK: - Method
     private func setContoller() {
         //네비게이션 설정
         self.navigationController?.navigationBar.topItem?.title = "MESSAGE"
@@ -52,15 +52,15 @@ extension MessageViewController {
 
 extension MessageViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
+        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (_, _) in
 //            print(html)
         }
-        webView.evaluateJavaScript("document.body.textContent") { (html, error) in
+        webView.evaluateJavaScript("document.body.textContent") { (_, _) in
 //            print(html)
         }
     }
 }
 
 extension MessageViewController: WKUIDelegate {
-    
+
 }

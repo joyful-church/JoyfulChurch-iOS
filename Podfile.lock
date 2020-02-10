@@ -67,6 +67,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.5.1):
     - GoogleUtilities/Logger
+  - JTAppleCalendar (8.0.3)
   - Kingfisher (5.13.0):
     - Kingfisher/Core (= 5.13.0)
   - Kingfisher/Core (5.13.0)
@@ -86,17 +87,20 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
   - SnapKit (5.0.1)
+  - SwiftLint (0.38.2)
 
 DEPENDENCIES:
   - Alamofire
   - ESTabBarController-swift
   - Firebase
   - FSPagerView
+  - JTAppleCalendar
   - Kingfisher
   - Realm
   - RxCocoa
   - RxSwift
   - SnapKit
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -114,6 +118,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - JTAppleCalendar
     - Kingfisher
     - nanopb
     - PromisesObjC
@@ -122,6 +127,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -138,6 +144,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 0048df6388dab1c254799f2a30365b1dffe20422
   GoogleDataTransportCCTSupport: f880d70972efa2ed1be4e9173a0f4c5f3dc2d176
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
+  JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
   Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -146,7 +153,8 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
 
-PODFILE CHECKSUM: c631bff00168b9a59f1716db699dca1d5c8c470f
+PODFILE CHECKSUM: 16dd9a6fe8f8549169e62740da97cecb0327beca
 
 COCOAPODS: 1.8.4

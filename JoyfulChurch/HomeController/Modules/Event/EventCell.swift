@@ -6,7 +6,6 @@
 //  Copyright © 2019 JoyfulChurch. All rights reserved.
 //
 
-
 import UIKit
 import SnapKit
 import RxSwift
@@ -19,12 +18,12 @@ class EventCell: UITableViewCell {
         titleLabel.text = "뭐지?"
         return titleLabel
     }()
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setView()
     }
-    
+
     private func setView() {
         self.addSubview(titleLabel)
         self.titleLabel.snp.makeConstraints { (make) in
@@ -40,5 +39,5 @@ class EventCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

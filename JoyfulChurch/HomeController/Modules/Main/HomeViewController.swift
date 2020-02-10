@@ -5,7 +5,7 @@ let MENUCELLHEIGHT: CGFloat = 460/3
 
 class HomeViewController: UIViewController {
 
-    //MARK: - IBOutlet
+    // MARK: - IBOutlet
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitleLabel: UILabel!
     @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint!
@@ -27,12 +27,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuBaseView: UIView!
     @IBOutlet weak var menuBaseViewHeight: NSLayoutConstraint!
     @IBOutlet weak var menuTableView: UITableView!
-    
-    //MARK: - Property
-    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg"]
+
+    // MARK: - Property
+    fileprivate let imageNames = ["1.jpg", "2.jpg", "3.jpg"]
     fileprivate let menuArray = ["EVENT", "CONNECT", "PRAYER", "SOCIAL"]
-    
-    //MARK: - Life Cycle
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setController()
@@ -42,19 +42,19 @@ class HomeViewController: UIViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(enterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
         print("viewWillAppear")
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("viewDidAppear")
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 //        navigationController?.navigationBar.isHidden = false
@@ -62,28 +62,28 @@ class HomeViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
         print("viewWillDisappear")
     }
-    
-    //MARK:: - Method
+
+    // MARK: : - Method
     private func setController() {
         self.menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
-        
+
         pagerView.delegate = self
         pagerView.dataSource = self
         scrollView.delegate = self
         //네이게이션 설정
         self.navigationController?.navigationBar.isHidden = true
-        
+
         self.title = "JOYFUL"
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 10.0
     }
-    
+
     @objc private func enterForeground() {
         print("enterForeground")
     }
-    
+
     @objc func enterBackground() {
         print("enterBackground")
     }
@@ -93,14 +93,14 @@ extension HomeViewController: FSPagerViewDataSource {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return self.imageNames.count
     }
-    
+
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         cell.imageView?.image = UIImage(named: self.imageNames[index])
         cell.imageView?.contentMode = .scaleAspectFill
         return cell
     }
-    
+
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
     }
@@ -110,7 +110,7 @@ extension HomeViewController: FSPagerViewDelegate {
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
         self.pageControl.currentPage = targetIndex
     }
-    
+
     func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
         self.pageControl.currentPage = pagerView.currentIndex
     }
@@ -133,19 +133,19 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MENUCELLHEIGHT
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
         let segue = cell.getSegueIdentifierFromSelectedRows(indexPath: indexPath)
         self.performSegue(withIdentifier: segue, sender: nil)
     }
-    
+
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
         cell.contentView.backgroundColor = .white
     }
-    
+
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -156,14 +156,13 @@ extension HomeViewController: UITableViewDataSource {
         menuBaseViewHeight.constant = MENUCELLHEIGHT * CGFloat(menuArray.count)
         return menuArray.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
-        
+
         cell.menuImageView.image = UIImage(named: menuArray[indexPath.row])
-        
+
         return cell
     }
-    
-    
+
 }

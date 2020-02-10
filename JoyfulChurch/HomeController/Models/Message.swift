@@ -13,7 +13,7 @@ struct Message {
     var date: Date?
     var speaker: String?
     var bible: String?
-    
+
     init(dic: [String: Any]) {
         guard let title = dic["title"] as? String else { return }
         self.title = title

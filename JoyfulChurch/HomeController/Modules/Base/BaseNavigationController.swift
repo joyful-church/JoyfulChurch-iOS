@@ -8,17 +8,17 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
-    
+
     // MARK: - Overridden: UINavigationController
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setProperties()
     }
-    
+
     // MARK: - Private methods
-    
+
     func setProperties() {
         view.backgroundColor = .white
         self.navigationBar.tintColor = .white
@@ -26,5 +26,5 @@ class BaseNavigationController: UINavigationController {
         self.navigationBar.barTintColor = .black
         self.navigationBar.isTranslucent = false
     }
-    
+
 }
