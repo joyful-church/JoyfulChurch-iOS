@@ -16,6 +16,10 @@ target 'JoyfulChurch' do
 
   #Firebase
   pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
 
   #PagerView
   pod 'FSPagerView'

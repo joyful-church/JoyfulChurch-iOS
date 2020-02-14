@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>28618900394-tmog7ppq8g9j12u9t5dmgf017vgbfoe6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.28618900394-tmog7ppq8g9j12u9t5dmgf017vgbfoe6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDSZgko7NMNx6tcJOiYl0SjpbcfzHbr2Q0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>28618900394</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.joyfulchurch.JoyfulChurch</string>
+	<key>PROJECT_ID</key>
+	<string>joyfulchurch-7554f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>joyfulchurch-7554f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:28618900394:ios:6519a4df318f8605fee1d3</string>
+	<key>DATABASE_URL</key>
+	<string>https://joyfulchurch-7554f.firebaseio.com</string>
+</dict>
+</plist>
