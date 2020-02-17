@@ -28,6 +28,7 @@
 		23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6E929225E0FD8007EA305 /* EventCell.swift */; };
 		23F6E92C225E0FD8007EA305 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F6E92A225E0FD8007EA305 /* EventCell.xib */; };
 		38873BE423F663ED00D02B28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38873BE323F663EC00D02B28 /* GoogleService-Info.plist */; };
+		38873BE723F673AD00D02B28 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38873BE623F673AD00D02B28 /* FirebaseManager.swift */; };
 		38A619ED23F3F17100C60123 /* AppPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A619EC23F3F17100C60123 /* AppPushManager.swift */; };
 		38A619F023F3F1A300C60123 /* UserNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A619EF23F3F1A300C60123 /* UserNotificationManager.swift */; };
 		38AAA67223EB94CB008CB57E /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAA67123EB94CB008CB57E /* MainTabbarController.swift */; };
@@ -86,6 +87,7 @@
 		23F6E929225E0FD8007EA305 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		23F6E92A225E0FD8007EA305 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		38873BE323F663EC00D02B28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38873BE623F673AD00D02B28 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		38A619EC23F3F17100C60123 /* AppPushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPushManager.swift; sourceTree = "<group>"; };
 		38A619EF23F3F1A300C60123 /* UserNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationManager.swift; sourceTree = "<group>"; };
 		38AAA67123EB94CB008CB57E /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
@@ -279,12 +281,21 @@
 		23F6E928225B9089007EA305 /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
+				38873BE523F6739B00D02B28 /* Manager */,
 				38A619EA23F3F13D00C60123 /* Application */,
 				38AAA67523EB9693008CB57E /* Extensions */,
 				23838ECE225F6F9E003EB51E /* Models */,
 				23838ECD225F6F8A003EB51E /* Modules */,
 			);
 			path = HomeController;
+			sourceTree = "<group>";
+		};
+		38873BE523F6739B00D02B28 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				38873BE623F673AD00D02B28 /* FirebaseManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		38A619EA23F3F13D00C60123 /* Application */ = {
@@ -591,6 +602,7 @@
 				23509D9D2240067300872F81 /* MenuCell.swift in Sources */,
 				38AAA67423EB952D008CB57E /* MainTabbarItemContentView.swift in Sources */,
 				38A619F023F3F1A300C60123 /* UserNotificationManager.swift in Sources */,
+				38873BE723F673AD00D02B28 /* FirebaseManager.swift in Sources */,
 				23F6E92B225E0FD8007EA305 /* EventCell.swift in Sources */,
 				23838ED3225F6FE4003EB51E /* EventViewModel.swift in Sources */,
 				23229D38222D58CC00B472CD /* MoreViewController.swift in Sources */,
