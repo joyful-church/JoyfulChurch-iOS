@@ -13,6 +13,7 @@ target 'JoyfulChurch' do
 
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'SwiftyJSON'
 
   #Firebase
   pod 'Firebase'

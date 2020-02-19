@@ -1,5 +1,6 @@
 import UIKit
 import FSPagerView
+import SwiftyJSON
 
 let MENUCELLHEIGHT: CGFloat = 460/3
 
@@ -78,6 +79,10 @@ class HomeViewController: UIViewController {
         self.title = "JOYFUL"
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 10.0
+        FirebaseManager.shared.readMainImages { (json) in
+            guard let json = json else { return }
+            print(json)
+        }
     }
 
     @objc private func enterForeground() {

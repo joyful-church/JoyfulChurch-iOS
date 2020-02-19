@@ -7,17 +7,21 @@
 //
 
 import Firebase
+import SwiftyJSON
 
 class FirebaseManager {
     
-    let shared = FirebaseManager()
+    static let shared = FirebaseManager()
     
     let reference = Database.database().reference()
     let storage = Storage.storage().reference()
     
-    func asd() {
-        
+    func readMainImages(completion: @escaping (JSON?)-> Void) {
+        var result: JSON?
+        reference.child("main").observeSingleEvent(of: .value) { (snapShot) in
+            guard let value = snapShot.value else { return }
+            result = JSON(value)
+            completion(result)
+        }
     }
-//    let userID =
-    
 }
