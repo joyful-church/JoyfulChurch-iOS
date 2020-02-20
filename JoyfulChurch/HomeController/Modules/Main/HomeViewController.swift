@@ -5,7 +5,12 @@ import SwiftyJSON
 let MENUCELLHEIGHT: CGFloat = 460/3
 
 class HomeViewController: UIViewController {
-
+    
+    // MARK: - Property
+    fileprivate var imageNames = [URL]()
+    fileprivate var menuArray = ["EVENT", "CONNECT", "PRAYER", "SOCIAL"]
+    private let homeVM = HomeViewModel()
+    
     // MARK: - IBOutlet
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitleLabel: UILabel!
@@ -15,82 +20,52 @@ class HomeViewController: UIViewController {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
         }
     }
-    @IBOutlet weak var pageControl: FSPageControl! {
-        didSet {
-            self.pageControl.numberOfPages = self.imageNames.count
-            self.pageControl.contentHorizontalAlignment = .center
-            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-            self.pageControl.hidesForSinglePage = true
-        }
-    }
+    @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var menuBaseView: UIView!
     @IBOutlet weak var menuBaseViewHeight: NSLayoutConstraint!
     @IBOutlet weak var menuTableView: UITableView!
 
-    // MARK: - Property
-    fileprivate let imageNames = ["1.jpg", "2.jpg", "3.jpg"]
-    fileprivate let menuArray = ["EVENT", "CONNECT", "PRAYER", "SOCIAL"]
-
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setController()
-        if #available(iOS 11.0, *) {
-            scrollView.contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
+        scrollView.contentInsetAdjustmentBehavior = .never
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(enterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
-        print("viewWillAppear")
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("viewDidAppear")
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-//        navigationController?.navigationBar.isHidden = false
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
-        print("viewWillDisappear")
-    }
 
     // MARK: : - Method
     private func setController() {
+        
+        //메뉴 테이블 뷰 설정
         self.menuTableView.register(UINib(nibName: "MenuCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
-
+        
+        //페이지뷰 설정
         pagerView.delegate = self
         pagerView.dataSource = self
-        scrollView.delegate = self
-        //네이게이션 설정
-        self.navigationController?.navigationBar.isHidden = true
-
-        self.title = "JOYFUL"
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 10.0
-        FirebaseManager.shared.readMainImages { (json) in
-            guard let json = json else { return }
-            print(json)
+        scrollView.delegate = self
+        
+        //네이게이션 설정
+        self.navigationController?.navigationBar.isHidden = true
+        
+        homeVM.getMainBannerImages { [weak self] (urls) in
+            guard let self = self else { return }
+            self.imageNames = urls
+            self.pagerView.reloadData()
+            self.pageControl.numberOfPages = self.imageNames.count
+            self.pageControl.contentHorizontalAlignment = .center
+            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            self.pageControl.hidesForSinglePage = true
         }
-    }
-
-    @objc private func enterForeground() {
-        print("enterForeground")
-    }
-
-    @objc func enterBackground() {
-        print("enterBackground")
     }
 }
 
@@ -101,7 +76,7 @@ extension HomeViewController: FSPagerViewDataSource {
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.image = UIImage(named: self.imageNames[index])
+        cell.imageView?.kf.setImage(with: self.imageNames[index])
         cell.imageView?.contentMode = .scaleAspectFill
         return cell
     }
