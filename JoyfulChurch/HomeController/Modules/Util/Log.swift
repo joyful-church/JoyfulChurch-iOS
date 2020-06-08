@@ -42,9 +42,7 @@ class Log {
 
     //tj's Log 개인취향존중 알아서 바꾸세여
     class func tj(_ any: Any, filename: String = #file, funcName: String = #function) {
-        #if DEBUG
         print("[🐼tj][\(sourceFileName(filePath: filename))] \(funcName) -> \(any)")
-        #endif
     }
 
     private class func sourceFileName(filePath: String) -> String {

@@ -7,8 +7,9 @@ let MENUCELLHEIGHT: CGFloat = 460/3
 class HomeViewController: UIViewController {
     
     // MARK: - Property
-    fileprivate var imageNames = [URL]()
-    fileprivate var menuArray = ["EVENT", "CONNECT", "PRAYER", "SOCIAL"]
+    private var imageURLs = [URL]()
+    private var images = [UIImage]()
+    private var menuArray = ["EVENT", "CONNECT", "PRAYER", "SOCIAL"]
     private let homeVM = HomeViewModel()
     
     // MARK: - IBOutlet
@@ -57,26 +58,37 @@ class HomeViewController: UIViewController {
         //네이게이션 설정
         self.navigationController?.navigationBar.isHidden = true
         
-        homeVM.getMainBannerImages { [weak self] (urls) in
-            guard let self = self else { return }
-            self.imageNames = urls
-            self.pagerView.reloadData()
-            self.pageControl.numberOfPages = self.imageNames.count
-            self.pageControl.contentHorizontalAlignment = .center
-            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-            self.pageControl.hidesForSinglePage = true
+        DispatchQueue.global().async {
+            self.homeVM.getMainBannerImages { [weak self] (urls) in
+                guard let self = self else { return }
+                self.imageURLs = urls
+//                for url in self.imageURLs {
+//                    guard let data = try? Data(contentsOf: url), let image = UIImage(data: data) else { continue }
+//                    self.images.append(image)
+//                    Log.tj(self.images)
+//                }
+                Log.tj(self.imageURLs)
+                self.pagerView.reloadData()
+                self.pageControl.numberOfPages = self.imageURLs.count
+                self.pageControl.contentHorizontalAlignment = .center
+                self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+                self.pageControl.hidesForSinglePage = true
+            }
         }
+//        DispatchQueue.main.async {
+//
+//        }
     }
 }
 
 extension HomeViewController: FSPagerViewDataSource {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return self.imageNames.count
+        return self.imageURLs.count
     }
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.kf.setImage(with: self.imageNames[index])
+        cell.imageView?.kf.setImage(with: imageURLs[index])
         cell.imageView?.contentMode = .scaleAspectFill
         return cell
     }
