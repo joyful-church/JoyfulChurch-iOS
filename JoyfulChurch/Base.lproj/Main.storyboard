@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Event View Controller-->
         <scene sceneID="ZM6-1Q-YPW">
             <objects>
-                <viewController id="grn-W3-4BS" customClass="EventViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="grn-W3-4BS" customClass="EventViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j07-EA-Qd4"/>
                         <viewControllerLayoutGuide type="bottom" id="JZf-rm-tD3"/>
@@ -28,7 +28,7 @@
         <!--Home View Controller-->
         <scene sceneID="vmk-mX-NgI">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="XBb-Kh-Zqs" customClass="HomeViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="XBb-Kh-Zqs" customClass="HomeViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J5U-sF-oYX"/>
                         <viewControllerLayoutGuide type="bottom" id="bsd-Za-K6Z"/>
@@ -48,7 +48,7 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZ2-lC-4Ht" customClass="FSPagerView" customModule="FSPagerView">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="ItM-f9-Gn2"/>
                                                         </constraints>
@@ -165,7 +165,7 @@
         <!--MessageViewController-->
         <scene sceneID="cdC-gR-ebx">
             <objects>
-                <viewController storyboardIdentifier="MessageViewController" automaticallyAdjustsScrollViewInsets="NO" id="ofH-wa-T6a" userLabel="MessageViewController" customClass="MessageViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageViewController" automaticallyAdjustsScrollViewInsets="NO" id="ofH-wa-T6a" userLabel="MessageViewController" customClass="MessageViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ej4-ji-2L8"/>
                         <viewControllerLayoutGuide type="bottom" id="wuA-wK-ll3"/>
@@ -212,7 +212,7 @@
         <!--MoreViewController-->
         <scene sceneID="Ya6-cp-PsS">
             <objects>
-                <viewController storyboardIdentifier="MoreViewController" automaticallyAdjustsScrollViewInsets="NO" id="2Z5-m9-hiQ" userLabel="MoreViewController" customClass="MoreViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" automaticallyAdjustsScrollViewInsets="NO" id="2Z5-m9-hiQ" userLabel="MoreViewController" customClass="MoreViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mQc-8F-s0B"/>
                         <viewControllerLayoutGuide type="bottom" id="m2A-eH-4my"/>
@@ -259,7 +259,7 @@
         <!--Pray View Controller-->
         <scene sceneID="eFp-jV-ojr">
             <objects>
-                <viewController id="xR5-pd-IzJ" customClass="PrayViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xR5-pd-IzJ" customClass="PrayViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dkQ-Yi-3Wq"/>
                         <viewControllerLayoutGuide type="bottom" id="oUU-Su-4hP"/>
@@ -277,7 +277,7 @@
         <!--Connect View Controller-->
         <scene sceneID="u3G-1u-63c">
             <objects>
-                <viewController id="WIo-kM-EKr" customClass="ConnectViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WIo-kM-EKr" customClass="ConnectViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xKx-IT-LN2"/>
                         <viewControllerLayoutGuide type="bottom" id="Em4-6n-snH"/>
@@ -295,7 +295,7 @@
         <!--Social View Controller-->
         <scene sceneID="ZGs-YV-DSl">
             <objects>
-                <viewController id="Uup-zz-ByM" customClass="SocialViewController" customModule="JoyfulChurch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uup-zz-ByM" customClass="SocialViewController" customModule="JOYFUL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LdY-2e-fIy"/>
                         <viewControllerLayoutGuide type="bottom" id="aWW-4p-qlm"/>

@@ -75,9 +75,6 @@ class HomeViewController: UIViewController {
                 self.pageControl.hidesForSinglePage = true
             }
         }
-//        DispatchQueue.main.async {
-//
-//        }
     }
 }
 
@@ -88,6 +85,7 @@ extension HomeViewController: FSPagerViewDataSource {
 
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.image = UIImage(named: "EmptyPhoto")
         cell.imageView?.kf.setImage(with: imageURLs[index])
         cell.imageView?.contentMode = .scaleAspectFill
         return cell
